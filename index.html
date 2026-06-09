@@ -371,47 +371,45 @@ function filter(cat) {
         : services.filter(s => s.cat === cat);
 
     items.forEach(s => {
-        grid.innerHTML += `
-            <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden border border-orange-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer">
+    grid.innerHTML += `
+    <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
 
-                <div class="overflow-hidden bg-orange-50 h-64 relative">
-                    <img src="${s.img}"
-                         alt="${s.title}"
-                         class="service-img">
-                </div>
+        <div class="overflow-hidden bg-orange-50">
+            <img src="${s.img}"
+                 alt="${s.title}"
+                 class="service-img w-full h-64 object-cover">
+        </div>
 
-                <div class="p-8">
-                    <h4 class="font-black text-lg text-orange-950 mb-2">
-                        ${s.title}
-                    </h4>
+        <div class="p-6">
+            <h4 class="font-black text-xl text-orange-900 mb-2">
+                ${s.title}
+            </h4>
 
-                    <p class="text-xs text-gray-500 mb-6 leading-relaxed">
-                        ${s.desc}
-                    </p>
+            <p class="text-gray-500 text-sm mb-4">
+                ${s.desc}
+            </p>
 
-                    <div class="flex gap-2 mt-4">
+            <div class="flex gap-2">
 
-                        <button
-                        onclick="event.stopPropagation(); selectService('${s.title}')"
-                        class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold hover:bg-orange-200 transition">
-                        عرض المنتج
-                        </button>
+                <button
+                onclick="selectService('${s.title}')"
+                class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold">
+                عرض المنتج
+                </button>
 
-                        <a
-                        href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
-                        target="_blank"
-                        onclick="event.stopPropagation();"
-                        class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hover:bg-orange-700 transition">
-                        اطلب الآن
-                        </a>
+                <a
+                href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
+                target="_blank"
+                class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center">
+                اطلب الآن
+                </a>
 
-                    </div>
-
-                </div>
             </div>
-        `;
-    });
-}
+        </div>
+
+    </div>
+    `;
+});
 
         function selectService(title) {
             document.getElementById('cust-service').value = title;
