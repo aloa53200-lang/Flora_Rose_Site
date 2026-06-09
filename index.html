@@ -447,36 +447,257 @@ icon: 'fa-spa',
 desc: 'تنسيق صناعي فاخر.'
 },
 
-];
+]; ,
 
+/* ===========================
+   سيارات العرسان
+=========================== */
+/* ===========================
+   سيارات العرسان
+=========================== */
+
+{
+id: 21,
+cat: 'wedding',
+title: 'موكب العريس الملكي',
+img: 'car1.jpg',
+icon: 'fa-car',
+desc: 'تشريع فاخر لسيارة العريس.'
+},
+
+{
+id: 22,
+cat: 'wedding',
+title: 'زفة الأحلام',
+img: 'car2.jpg',
+icon: 'fa-car',
+desc: 'تنسيق ورد كامل للسيارة.'
+},
+
+{
+id: 23,
+cat: 'wedding',
+title: 'سيارة العروس المميزة',
+img: 'car3.jpg',
+icon: 'fa-car',
+desc: 'تصميم أنيق للعروس.'
+},
+
+{
+id: 24,
+cat: 'wedding',
+title: 'الفخامة الذهبية',
+img: 'car4.jpg',
+icon: 'fa-car',
+desc: 'تنسيق ملكي فاخر.'
+},
+
+{
+id: 25,
+cat: 'wedding',
+title: 'ليلة العمر',
+img: 'car5.jpg',
+icon: 'fa-car',
+desc: 'تشريع مميز للمناسبات.'
+},
+
+{
+id: 26,
+cat: 'wedding',
+title: 'ورد العرسان',
+img: 'car6.jpg',
+icon: 'fa-car',
+desc: 'تنسيق طبيعي فاخر.'
+},
+
+{
+id: 27,
+cat: 'wedding',
+title: 'موكب الحب',
+img: 'car7.jpg',
+icon: 'fa-car',
+desc: 'تصميم عصري جذاب.'
+},
+
+{
+id: 28,
+cat: 'wedding',
+title: 'سيارة الأحلام',
+img: 'car8.jpg',
+icon: 'fa-car',
+desc: 'ديكور متكامل للسيارة.'
+},
+
+{
+id: 29,
+cat: 'wedding',
+title: 'التشريع الملكي',
+img: 'car9.jpg',
+icon: 'fa-car',
+desc: 'أفخم تنسيقات السيارات.'
+},
+
+{
+id: 30,
+cat: 'wedding',
+title: 'موكب روز',
+img: 'car10.jpg',
+icon: 'fa-car',
+desc: 'تنسيق خاص من فلورا روز.'
+},
+
+/* ===========================
+   الكوش والحفلات
+=========================== */
+
+{
+id: 31,
+cat: 'tech',
+title: 'كوشة الأحلام',
+img: 'kosha1.jpg',
+icon: 'fa-ring',
+desc: 'تصميم راقٍ لحفلات الزواج.'
+},
+
+{
+id: 32,
+cat: 'tech',
+title: 'ليلة ملكية',
+img: 'kosha2.jpg',
+icon: 'fa-ring',
+desc: 'كوشة فاخرة ومميزة.'
+},
+
+{
+id: 33,
+cat: 'tech',
+title: 'القصر الذهبي',
+img: 'kosha3.jpg',
+icon: 'fa-ring',
+desc: 'تصميم ملكي فاخر.'
+},
+
+{
+id: 34,
+cat: 'tech',
+title: 'منصة الحب',
+img: 'kosha4.jpg',
+icon: 'fa-ring',
+desc: 'كوشة رومانسية أنيقة.'
+},
+
+{
+id: 35,
+cat: 'tech',
+title: 'ليلة العمر',
+img: 'kosha5.jpg',
+icon: 'fa-ring',
+desc: 'تنسيق متكامل للحفل.'
+},
+
+{
+id: 36,
+cat: 'tech',
+title: 'قاعة النجوم',
+img: 'kosha6.jpg',
+icon: 'fa-ring',
+desc: 'ديكور فاخر للحفلات.'
+},
+
+{
+id: 37,
+cat: 'tech',
+title: 'أميرة المساء',
+img: 'kosha7.jpg',
+icon: 'fa-ring',
+desc: 'تصميم راقٍ للعروس.'
+},
+
+{
+id: 38,
+cat: 'tech',
+title: 'ليلة الورد',
+img: 'kosha8.jpg',
+icon: 'fa-ring',
+desc: 'تنسيق وردي فاخر.'
+},
+
+{
+id: 39,
+cat: 'tech',
+title: 'الكوشة الماسية',
+img: 'kosha9.jpg',
+icon: 'fa-ring',
+desc: 'ديكور فاخر ومميز.'
+},
+
+{
+id: 40,
+cat: 'tech',
+title: 'فلورا الملكية',
+img: 'kosha10.jpg',
+icon: 'fa-ring',
+desc: 'أحدث تصاميم الكوش.'
+}
+        ];
         function filter(cat) {
-            const grid = document.getElementById('services-grid');
-            grid.innerHTML = '';
-            
-            // Update UI buttons
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                b.classList.remove('bg-orange-600', 'text-white');
-                b.classList.add('bg-white', 'text-gray-600');
-            });
-            event.target.classList.add('bg-orange-600', 'text-white');
+    const grid = document.getElementById('services-grid');
+    grid.innerHTML = '';
 
-            const items = cat === 'all' ? services : services.filter(s => s.cat === cat);
-            
-            items.forEach(s => {
-                grid.innerHTML += `
-                    <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden border border-orange-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer" onclick="selectService('${s.title}')">
-                        <div class="overflow-hidden bg-orange-50 h-64 relative">
-                            <img src="${s.img}" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center text-orange-200\'><i class=\'fa-solid ${s.icon} text-5xl mb-2\'></i><span class=\'text-[10px] font-bold\'>بانتظار صورة ${s.title}</span></div>'" alt="${s.title}" class="service-img">
-                        </div>
-                        <div class="p-8">
-                            <h4 class="font-black text-lg text-orange-950 mb-2">${s.title}</h4>
-                            <p class="text-xs text-gray-500 mb-6 leading-relaxed">${s.desc}</p>
-                            <span class="text-xs font-black text-orange-600 flex items-center gap-2 group-hover:gap-4 transition-all">اطلب هذا التنسيق الآن <i class="fa-solid fa-arrow-left"></i></span>
-                        </div>
+    // Update UI buttons
+    document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-orange-600', 'text-white');
+        b.classList.add('bg-white', 'text-gray-600');
+    });
+
+    event.target.classList.add('bg-orange-600', 'text-white');
+
+    const items = cat === 'all'
+        ? services
+        : services.filter(s => s.cat === cat);
+
+    items.forEach(s => {
+        grid.innerHTML += `
+            <div class="service-card group bg-white rounded-[2.5rem] overflow-hidden border border-orange-100 shadow-sm hover:shadow-2xl transition-all cursor-pointer">
+
+                <div class="overflow-hidden bg-orange-50 h-64 relative">
+                    <img src="${s.img}"
+                         alt="${s.title}"
+                         class="service-img">
+                </div>
+
+                <div class="p-8">
+                    <h4 class="font-black text-lg text-orange-950 mb-2">
+                        ${s.title}
+                    </h4>
+
+                    <p class="text-xs text-gray-500 mb-6 leading-relaxed">
+                        ${s.desc}
+                    </p>
+
+                    <div class="flex gap-2 mt-4">
+
+                        <button
+                        onclick="event.stopPropagation(); selectService('${s.title}')"
+                        class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold hover:bg-orange-200 transition">
+                        عرض المنتج
+                        </button>
+
+                        <a
+                        href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
+                        target="_blank"
+                        onclick="event.stopPropagation();"
+                        class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hover:bg-orange-700 transition">
+                        اطلب الآن
+                        </a>
+
                     </div>
-                `;
-            });
-        }
+
+                </div>
+            </div>
+        `;
+    });
+}
 
         function selectService(title) {
             document.getElementById('cust-service').value = title;
