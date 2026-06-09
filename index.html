@@ -89,27 +89,27 @@ class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hov
     </h3>
          <!-- التواصل  Floating Contact Button -->
  
-    <div class="flex justify-center gap-4">
+    <div class="flex justify-center gap-3 mt-6">
 
-        <a href="https://www.instagram.com/florarose1a"
-           target="_blank"
-           class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white flex items-center justify-center text-2xl hover:scale-110 transition">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+    <a href="https://www.instagram.com/florarose1a" target="_blank"
+       class="px-4 py-3 rounded-xl bg-pink-50 hover:bg-pink-100 transition flex items-center gap-2">
+        <i class="fa-brands fa-instagram text-pink-600"></i>
+        <span class="font-bold">Instagram</span>
+    </a>
 
-        <a href="https://www.tiktok.com/@.florarose1"
-           target="_blank"
-           class="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center text-2xl hover:scale-110 transition">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
+    <a href="https://www.tiktok.com/@.florarose1" target="_blank"
+       class="px-4 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition flex items-center gap-2">
+        <i class="fa-brands fa-tiktok"></i>
+        <span class="font-bold">TikTok</span>
+    </a>
 
-        <a href="https://snapchat.com/t/RA41iIuN"
-           target="_blank"
-           class="w-14 h-14 rounded-full bg-yellow-400 text-white flex items-center justify-center text-2xl hover:scale-110 transition">
-            <i class="fa-brands fa-snapchat"></i>
-        </a>
+    <a href="https://snapchat.com/t/RA41iIuN" target="_blank"
+       class="px-4 py-3 rounded-xl bg-yellow-50 hover:bg-yellow-100 transition flex items-center gap-2">
+        <i class="fa-brands fa-snapchat text-yellow-500"></i>
+        <span class="font-bold">Snapchat</span>
+    </a>
 
-    </div>
+</div>
 
 </div>
     <main class="max-w-6xl mx-auto px-6 py-10">
@@ -190,44 +190,39 @@ class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hov
         </section>
 
         <!-- Interactive Service Catalog -->
-        <section id="catalog" class="mb-24">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
-                <div>
-                    <h3 class="text-3xl font-black text-gray-900">دليل الخدمات والإبداع</h3>
-                    <p class="text-gray-500">اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية</p>
-                </div>
-               <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full no-scrollbar">
+       <section id="catalog" class="mb-24">
 
-<button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">الكل</button>
+    <div class="text-center mb-8">
+        <h3 class="text-3xl font-black text-gray-900">
+            دليل الخدمات والإبداع
+        </h3>
 
-<button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">باقات ورد طبيعية</button>
+        <p class="text-gray-500 mt-2">
+            اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
+        </p>
+    </div>
 
-<button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">باقات ورد صناعية</button>
+    <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
 
-<button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">تشريع سيارات عرسان</button>
+        <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">الكل</button>
 
-<button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">حفلات مواليد</button>
+        <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">باقات ورد طبيعية</button>
 
-<button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">حفلات زواج وملكة</button>
+        <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">باقات ورد صناعية</button>
 
-<button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">حفلات تخرج</button>
+        <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">تشريع سيارات عرسان</button>
 
-<button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">شاشات ترحيبية</button>
+        <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">حفلات مواليد</button>
 
-<button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">شاشات طاولات إلكترونية</button>
+        <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">حفلات زواج وملكة</button>
 
-<button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">ركن كوفي</button>
+    </div>
 
-<button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">عربيات ملكة</button>
+    <div id="services-grid"
+         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    </div>
 
-<button onclick="filter('printing')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">دعوات وأكريليك</button>
-
-</div>
-            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Dynamic Content via JS -->
-            </div>
-        </section>
-
+</section>
         <!-- Booking Form -->
         <section id="booking" class="mb-10">
             <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
@@ -389,7 +384,7 @@ function filter(cat) {
 
     items.forEach(s => {
         grid.innerHTML += `
-     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all w-full">                <div class="overflow-hidden bg-orange-50 h-56 relative">
+     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all ">                <div class="overflow-hidden bg-orange-50 h-56 relative">
                     <img
                         src="${s.img}"
                         alt="${s.title}"
