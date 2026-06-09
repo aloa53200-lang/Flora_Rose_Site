@@ -358,7 +358,6 @@ function filter(cat) {
     const grid = document.getElementById('services-grid');
     grid.innerHTML = '';
 
-    // Update UI buttons
     document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('bg-orange-600', 'text-white');
         b.classList.add('bg-white', 'text-gray-600');
@@ -371,45 +370,51 @@ function filter(cat) {
         : services.filter(s => s.cat === cat);
 
     items.forEach(s => {
-    grid.innerHTML += `
-<div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all max-w-sm mx-auto">
-<div class="overflow-hidden bg-orange-50 h-56 relative">
-<img src="${s.img}"
-alt="${s.title}"
-class="w-full h-full object-cover">
-        </div>
+        grid.innerHTML += `
+            <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all max-w-sm mx-auto">
 
-<div class="p-5 text-center">
-<h4 class="font-black text-xl text-orange-900 mb-2">
-                ${s.title}
-            </h4>
+                <div class="overflow-hidden bg-orange-50 h-56 relative">
+                    <img
+                        src="${s.img}"
+                        alt="${s.title}"
+                        class="w-full h-full object-cover"
+                        onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'"
+                    >
+                </div>
 
-            <p class="text-gray-500 text-sm mb-4">
-                ${s.desc}
-            </p>
+                <div class="p-5 text-center">
 
-            <div class="flex gap-2">
+                    <h4 class="font-black text-xl text-orange-900 mb-2">
+                        ${s.title}
+                    </h4>
 
-                <button
-                onclick="selectService('${s.title}')"
-                class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold">
-                عرض المنتج
-                </button>
+                    <p class="text-gray-500 text-sm mb-4">
+                        ${s.desc}
+                    </p>
 
-                <a
-                href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
-                target="_blank"
-                class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center">
-                اطلب الآن
-                </a>
+                    <div class="flex gap-2">
+
+                        <button
+                            onclick="selectService('${s.title}')"
+                            class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold">
+                            عرض المنتج
+                        </button>
+
+                        <a
+                            href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
+                            target="_blank"
+                            class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center">
+                            اطلب الآن
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
-        </div>
-
-    </div>
-    `;
-});
-
+        `;
+    });
+}
         function selectService(title) {
             document.getElementById('cust-service').value = title;
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
