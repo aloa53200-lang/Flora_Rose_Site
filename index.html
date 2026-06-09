@@ -36,8 +36,23 @@
     <!-- Floating Contact Button -->
     <a href="https://wa.me/966536790268" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 group">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
-        <span class="absolute right-20 bg-white text-green-600 px-4 py-2 rounded-xl font-bold text-sm shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">تواصل معنا الآن</span>
-    </a>
+<div class="flex gap-2 mt-4">
+
+<button
+onclick="event.stopPropagation(); selectService('${s.title}')"
+class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold hover:bg-orange-200 transition">
+عرض المنتج
+</button>
+
+<a
+href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
+target="_blank"
+onclick="event.stopPropagation();"
+class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hover:bg-orange-700 transition">
+اطلب الآن
+</a>
+
+</div>    </a>
   
     <!-- Navigation Header -->
     <header class="bg-white/90 border-b border-orange-100 sticky top-0 z-40 backdrop-blur-md">
@@ -243,13 +258,196 @@
 
     <script>
         const services = [
-            { id: 1, cat: 'nature', title: 'ورد طبيعي فاخر', img: 'edited-image.png.jpeg', icon: 'fa-leaf', desc: 'أجود أنواع الجوري والزهور المستوردة بتنسيق ملكي.' },
-            { id: 2, cat: 'artificial', title: 'ورد صناعي ملكي', img: 'artificial_rose.jpg.jpeg', icon: 'fa-spa', desc: 'تنسيقات تدوم للأبد بهيئة طبيعية مذهلة لمناسباتكم.' },
-            { id: 3, cat: 'wedding', title: 'تشريع سيارات عرسان', img: 'wedding_car.jpg', icon: 'fa-car', desc: 'نجعل ليلة زفافكم تبدأ بموكب فخم يليق بكم.' },
-            { id: 4, cat: 'wedding', title: 'تجهيز كوش وحفلات', img: 'wedding_party.jpg', icon: 'fa-ring', desc: 'تصميم وتنفيذ كوش الأفراح بأعلى معايير الجمال.' },
-            { id: 5, cat: 'tech', title: 'شاشات عرض استقبال', img: 'welcome_screen.jpg', icon: 'fa-tv', desc: 'شاشات ترحيبية وطاولات إلكترونية تفاعلية حديثة.' },
-            { id: 6, cat: 'tech', title: 'عربيات ملكة وأكريليك', img: 'wedding_cart.jpg', icon: 'fa-gift', desc: 'عربيات ملكة للإيجار والبيع مع طباعة حروف أكريليك.' }
-        ];
+
+/* ===========================
+   الورود الطبيعية
+=========================== */
+
+{
+id: 1,
+cat: 'nature',
+title: 'باقة الجوري الملكية',
+img: 'nature1.jpg',
+icon: 'fa-leaf',
+desc: 'تنسيق فاخر من الجوري الأحمر الطبيعي.'
+},
+
+{
+id: 2,
+cat: 'nature',
+title: 'سحر الورد الأحمر',
+img: 'nature2.jpg',
+icon: 'fa-leaf',
+desc: 'باقة رومانسية بتنسيق مميز.'
+},
+
+{
+id: 3,
+cat: 'nature',
+title: 'لمسة الحب البيضاء',
+img: 'nature3.jpg',
+icon: 'fa-leaf',
+desc: 'ورود بيضاء أنيقة للمناسبات.'
+},
+
+{
+id: 4,
+cat: 'nature',
+title: 'ورد الصباح الفاخر',
+img: 'nature4.jpg',
+icon: 'fa-leaf',
+desc: 'تنسيق ورد طبيعي فاخر.'
+},
+
+{
+id: 5,
+cat: 'nature',
+title: 'باقة الأميرة الذهبية',
+img: 'nature5.jpg',
+icon: 'fa-leaf',
+desc: 'باقة ملكية مميزة.'
+},
+
+{
+id: 6,
+cat: 'nature',
+title: 'أناقة الأوركيد',
+img: 'nature6.jpg',
+icon: 'fa-leaf',
+desc: 'أوركيد طبيعي فاخر.'
+},
+
+{
+id: 7,
+cat: 'nature',
+title: 'روز الفخامة',
+img: 'nature7.jpg',
+icon: 'fa-leaf',
+desc: 'تصميم ورد فاخر.'
+},
+
+{
+id: 8,
+cat: 'nature',
+title: 'باقة الحب الأبدي',
+img: 'nature8.jpg',
+icon: 'fa-leaf',
+desc: 'هدية رائعة للمناسبات.'
+},
+
+{
+id: 9,
+cat: 'nature',
+title: 'ورد المناسبات',
+img: 'nature9.jpg',
+icon: 'fa-leaf',
+desc: 'تنسيق احترافي للمناسبات.'
+},
+
+{
+id: 10,
+cat: 'nature',
+title: 'فلورا الخاصة',
+img: 'nature10.jpg',
+icon: 'fa-leaf',
+desc: 'تصميم حصري من فلورا روز.'
+},
+
+/* ===========================
+   الورود الصناعية
+=========================== */
+
+{
+id: 11,
+cat: 'artificial',
+title: 'اللؤلؤة البيضاء',
+img: 'art1.jpg',
+icon: 'fa-spa',
+desc: 'تنسيق صناعي فاخر.'
+},
+
+{
+id: 12,
+cat: 'artificial',
+title: 'ورد الحرير الفاخر',
+img: 'art2.jpg',
+icon: 'fa-spa',
+desc: 'ورد صناعي عالي الجودة.'
+},
+
+{
+id: 13,
+cat: 'artificial',
+title: 'الكريستال الملكي',
+img: 'art3.jpg',
+icon: 'fa-spa',
+desc: 'تصميم أنيق يدوم طويلاً.'
+},
+
+{
+id: 14,
+cat: 'artificial',
+title: 'الجمال الخالد',
+img: 'art4.jpg',
+icon: 'fa-spa',
+desc: 'ورد صناعي فاخر.'
+},
+
+{
+id: 15,
+cat: 'artificial',
+title: 'القصر الملكي',
+img: 'art5.jpg',
+icon: 'fa-spa',
+desc: 'تنسيق راقٍ للمجالس.'
+},
+
+{
+id: 16,
+cat: 'artificial',
+title: 'الأناقة الدائمة',
+img: 'art6.jpg',
+icon: 'fa-spa',
+desc: 'جمال يدوم لسنوات.'
+},
+
+{
+id: 17,
+cat: 'artificial',
+title: 'روز الفاخرة',
+img: 'art7.jpg',
+icon: 'fa-spa',
+desc: 'ورد صناعي احترافي.'
+},
+
+{
+id: 18,
+cat: 'artificial',
+title: 'تحفة الورد',
+img: 'art8.jpg',
+icon: 'fa-spa',
+desc: 'تنسيق فاخر جداً.'
+},
+
+{
+id: 19,
+cat: 'artificial',
+title: 'الوردة الماسية',
+img: 'art9.jpg',
+icon: 'fa-spa',
+desc: 'تصميم عصري راقٍ.'
+},
+
+{
+id: 20,
+cat: 'artificial',
+title: 'لمسة فخامة',
+img: 'art10.jpg',
+icon: 'fa-spa',
+desc: 'تنسيق صناعي فاخر.'
+},
+
+];
 
         function filter(cat) {
             const grid = document.getElementById('services-grid');
