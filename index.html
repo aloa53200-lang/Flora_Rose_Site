@@ -82,18 +82,36 @@ class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hov
     </a>-->
   
     </header>
-<div class="flex items-center gap-4">
-                <!-- Social Icons -->
-                <a href="https://www.instagram.com/florarose1a?igsh=M3d0N2FpdjlsYnU2" target="_blank" class="text-gray-400 hover:text-pink-600 transition-colors text-2xl">
-                <i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@.florarose1?_r=1&amp;_t=ZS-971T7z4PZ5d" target="_blank" class="text-gray-400 hover:text-black transition-colors text-2xl">
-                    <i class="fa-brands fa-tiktok"></i> </a>
-                <a href="https://snapchat.com/t/RA41iIuN" target="_blank" class="text-gray-400 hover:text-yellow-400 transition-colors text-2xl">
-                    <i class="fa-brands fa-snapchat"></i>
-                </a>
-                
-                <a href="tel:+966536790268" class="bg-brand-500 text-white px-5 py-2 rounded-full font-bold hover:bg-brand-600 transition-all">اتصل بنا</a>
-            </div>
+<div class="bg-white rounded-2xl shadow-md border border-orange-100 p-4 mt-4">
+    
+    <h3 class="text-center font-black text-orange-700 mb-4">
+        تابعنا على
+    </h3>
+         <!-- التواصل  Floating Contact Button -->
+ 
+    <div class="flex justify-center gap-4">
+
+        <a href="https://www.instagram.com/florarose1a"
+           target="_blank"
+           class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white flex items-center justify-center text-2xl hover:scale-110 transition">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@.florarose1"
+           target="_blank"
+           class="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center text-2xl hover:scale-110 transition">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="https://snapchat.com/t/RA41iIuN"
+           target="_blank"
+           class="w-14 h-14 rounded-full bg-yellow-400 text-white flex items-center justify-center text-2xl hover:scale-110 transition">
+            <i class="fa-brands fa-snapchat"></i>
+        </a>
+
+    </div>
+
+</div>
     <main class="max-w-6xl mx-auto px-6 py-10">
         
         <!-- Hero Section: Featured Work -->
@@ -371,8 +389,7 @@ function filter(cat) {
 
     items.forEach(s => {
         grid.innerHTML += `
-            service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all w-full
-                <div class="overflow-hidden bg-orange-50 h-56 relative">
+     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all w-full">                <div class="overflow-hidden bg-orange-50 h-56 relative">
                     <img
                         src="${s.img}"
                         alt="${s.title}"
