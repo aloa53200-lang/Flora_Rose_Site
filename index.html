@@ -38,6 +38,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 
 <script>
+     let isAdmin = false;
 const firebaseConfig = {
   apiKey: "ضع هنا apiKey من Firebase",
   authDomain: "ضع هنا authDomain من Firebase",
@@ -1393,55 +1394,43 @@ function filter(cat) {
     const items = cat === 'all'
         ? services
         : services.filter(s => s.cat === cat);
+items.forEach(s => {
+    grid.innerHTML += `
+    <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
 
-    items.forEach(s => {
-        grid.innerHTML += `
-     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all ">         
-     <div class="overflow-hidden bg-orange-50 h-56 relative">
+        <div class="overflow-hidden bg-orange-50 h-56 relative">
 
+            <img
+                src="${s.img}"
+                alt="${s.title}"
+                class="w-full h-full object-contain"
+                onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
 
+        </div>
 
-    <img
-        src="${s.img}"
-        alt="${s.title}"
-        class="w-full h-full object-contain"
-        onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'"
-    >
+        ${isAdmin ? `
+        <button
+            onclick="deleteProduct(${s.id})"
+            class="bg-red-600 text-white px-3 py-2 rounded-lg mt-2 mx-2">
+            حذف
+        </button>
+        ` : ''}
 
-</div>
+        <div class="p-5 text-center">
 
-                <div class="p-5 text-center">
+            <h3 class="font-black text-xl mb-2">
+                ${s.title}
+            </h3>
 
-                    <h4 class="font-black text-xl text-orange-900 mb-2">
-                        ${s.title}
-                    </h4>
+            <p>
+                ${s.desc}
+            </p>
 
-                    <p class="text-gray-500 text-sm mb-4">
-                        ${s.desc}
-                    </p>
+        </div>
 
-                    <div class="flex gap-2">
-
-                        <button
-                            onclick="selectService('${s.title}')"
-                            class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold">
-                            عرض المنتج
-                        </button>
-
-                        <a
-                            href="https://wa.me/966536790268?text=${encodeURIComponent('أرغب بطلب ' + s.title)}"
-                            target="_blank"
-                            class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center">
-                            اطلب الآن
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-        `;
-    });
+    </div>
+    `;
+});
 }
         function selectService(title) {
             document.getElementById('cust-service').value = title;
@@ -1533,7 +1522,32 @@ function filter(cat) {
     }
 
 }
+function deleteProduct(id){
 
+    if(!confirm("هل تريد حذف المنتج؟")){
+        return;
+    }
+
+    const index = services.findIndex(
+        item => item.id === id
+    );
+
+    if(index !== -1){
+
+        services.splice(index, 1);
+
+        localStorage.setItem(
+            "floraProducts",
+            JSON.stringify(services)
+        );
+
+        filter('all');
+
+        alert("تم حذف المنتج");
+
+    }
+
+}
 window.onload = () => {
 
     const savedProducts =
