@@ -351,6 +351,61 @@ const auth = firebase.auth();
                 </div>
             </div>
         </section>
+     
+         <!-- لوحة إضافة المنتجات -->
+
+             <section id="admin" class="bg-white p-8 rounded-3xl border mt-10">
+
+<h3 class="text-2xl font-black mb-6">
+لوحة إضافة المنتجات
+</h3>
+
+<div class="grid gap-4">
+
+<input
+id="newTitle"
+type="text"
+placeholder="اسم المنتج"
+class="border p-3 rounded-xl">
+
+<textarea
+id="newDesc"
+placeholder="وصف المنتج"
+class="border p-3 rounded-xl"></textarea>
+
+<select
+id="newCat"
+class="border p-3 rounded-xl">
+
+<option value="nature">ورد طبيعي</option>
+<option value="artificial">ورد صناعي</option>
+<option value="cars">سيارات عرسان</option>
+<option value="baby">مواليد</option>
+<option value="wedding">زواج</option>
+<option value="graduation">تخرج</option>
+<option value="welcome">شاشات ترحيبية</option>
+<option value="tables">شاشات طاولات</option>
+<option value="coffee">ركن كوفي</option>
+<option value="queen">عربيات ملكة</option>
+<option value="printing">دعوات وأكريليك</option>
+
+</select>
+
+<input
+id="newImage"
+type="file"
+accept="image/*"
+class="border p-3 rounded-xl">
+
+<button
+onclick="addProduct()"
+class="bg-orange-600 text-white p-4 rounded-xl font-bold">
+إضافة المنتج
+</button>
+
+</div>
+
+</section>
     </main>
 
     <footer class="bg-white py-12 border-t border-orange-50">
@@ -1414,30 +1469,67 @@ function filter(cat) {
         "_blank"
     );
 }
+         function addProduct() {
+
+    const file =
+    document.getElementById("newImage").files[0];
+
+    if (!file) {
+        alert("اختر صورة");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+        const product = {
+
+            id: Date.now(),
+
+            cat: document.getElementById("newCat").value,
+
+            title: document.getElementById("newTitle").value,
+
+            desc: document.getElementById("newDesc").value,
+
+            img: e.target.result,
+
+            icon: "fa-image"
+
+        };
+
+        services.push(product);
+
+        localStorage.setItem(
+            "floraProducts",
+            JSON.stringify(services)
+        );
+
+        filter('all');
+
+        alert("تمت إضافة المنتج");
+
+    };
+
+    reader.readAsDataURL(file);
+}
         window.onload = () => {
+             const savedProducts =
+JSON.parse(localStorage.getItem("floraProducts"));
+
+if(savedProducts){
+
+    services.length = 0;
+
+    savedProducts.forEach(item=>{
+        services.push(item);
+    });
+
+}
              
             filter('all');
-            const ctx = document.getElementById('satisfactionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['راضون جداً (5 نجوم)', 'راضون (4 نجوم)', 'أخرى'],
-                    datasets: [{
-                        data: [79, 4, 1],
-                        backgroundColor: ['#e08726', '#fbbf24', '#ffedd5'],
-                        borderWidth: 0,
-                        hoverOffset: 10
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'bottom', labels: { font: { family: 'Tajawal', weight: 'bold' } } }
-                    },
-                    cutout: '80%'
-                }
-            });
+            
         };
     </script>
 </body>
