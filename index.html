@@ -1349,11 +1349,11 @@ function filter(cat) {
      <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all ">         
      <div class="overflow-hidden bg-orange-50 h-56 relative">
 
-    <button
-        onclick="saveOrder('${s.title}','${s.img}')"
-        class="absolute top-2 left-2 z-10 bg-orange-600 text-white px-4 py-2 rounded-lg font-bold">
-        اطلب الآن
-    </button>
+  <button
+onclick="saveOrder('${s.title}','${s.img}')"
+class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold text-center hover:bg-orange-700 transition">
+اطلب الآن
+</button>
 
     <img
         src="${s.img}"
@@ -1409,14 +1409,14 @@ function filter(cat) {
             const text = `أهلاً فلورا روز 👋🌹\nمعك العميل: *${name}*\nأود الاستفسار وطلب تنسيق: \n✨ *[ ${serv} ]*\n\nمن فضلك زودني بالتفاصيل والأسعار.`;
             window.open(`https://wa.me/966536790268?text=${encodeURIComponent(text)}`, '_blank');
         }
-         async function saveOrder(productName, productImage) {
+        async function saveOrder(productName, productImage) {
 
     const customerName = prompt("اكتب اسمك");
 
     if (!customerName) return;
 
     const imageUrl =
-    "https://dazzling-crepe-2530df.netlify.app/" + productImage;
+    window.location.origin + "/" + productImage;
 
     window.open(
         `https://wa.me/966536790268?text=${encodeURIComponent(
@@ -1427,7 +1427,6 @@ function filter(cat) {
         "_blank"
     );
 }
-          
         window.onload = () => {
              
             filter('all');
