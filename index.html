@@ -354,7 +354,11 @@ const auth = firebase.auth();
      
          <!-- لوحة إضافة المنتجات -->
 
-             <section id="admin" class="bg-white p-8 rounded-3xl border mt-10">
+            <!-- لوحة إضافة المنتجات -->
+
+<section id="admin"
+style="display:none"
+class="bg-white p-8 rounded-3xl border mt-10">
 
 <h3 class="text-2xl font-black mb-6">
 لوحة إضافة المنتجات
@@ -1514,23 +1518,95 @@ function filter(cat) {
 
     reader.readAsDataURL(file);
 }
-        window.onload = () => {
-             const savedProducts =
-JSON.parse(localStorage.getItem("floraProducts"));
+        function openAdmin(){
 
-if(savedProducts){
+    const email = prompt("أدخل البريد الإلكتروني");
 
-    services.length = 0;
+    if(email === "walmaher0@gmail.com"){
 
-    savedProducts.forEach(item=>{
-        services.push(item);
+        document.getElementById("admin").style.display = "block";
+
+    }else{
+
+        alert("غير مصرح بالدخول");
+
+    }
+
+}
+
+window.onload = () => {
+
+    const savedProducts =
+    JSON.parse(localStorage.getItem("floraProducts"));
+
+    if(savedProducts){
+
+        services.length = 0;
+
+        savedProducts.forEach(item=>{
+            services.push(item);
+        });
+
+    }
+
+    filter('all');
+
+  const chartCanvas =
+document.getElementById('satisfactionChart');
+
+if(chartCanvas){
+
+    const ctx = chartCanvas.getContext('2d');
+
+    new Chart(ctx,{
+        type:'doughnut',
+        data:{
+            labels:[
+                'راضون جداً (5 نجوم)',
+                'راضون (4 نجوم)',
+                'أخرى'
+            ],
+            datasets:[{
+                data:[79,4,1],
+                backgroundColor:[
+                    '#e08726',
+                    '#fbbf24',
+                    '#ffedd5'
+                ],
+                borderWidth:0,
+                hoverOffset:10
+            }]
+        },
+        options:{
+            responsive:true,
+            maintainAspectRatio:false,
+            plugins:{
+                legend:{
+                    position:'bottom'
+                }
+            },
+            cutout:'80%'
+        }
     });
 
 }
-             
-            filter('all');
-            
-        };
+
+};
     </script>
+<button
+onclick="openAdmin()"
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:9999;
+background:#e08726;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:50px;
+cursor:pointer;">
+⚙ الإدارة
+</button>
 </body>
 </html>
