@@ -147,7 +147,7 @@ function openAdmin(){
         <!-- Hero Section: Featured Work -->
      <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
 
-    <div class="lg:col-span-7">
+    <div class="lg:col-span-12">
 
         <span class="inline-block bg-orange-100 text-orange-800 text-xs font-black px-4 py-1.5 rounded-full mb-6">
             نشاركك مناسبتك بلمستنا الخاصة
@@ -162,6 +162,7 @@ function openAdmin(){
         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
             <strong class="text-orange-600">فلورا روز</strong>
             علامة تجارية مسجلة، متخصصة في تنسيق الورود الطبيعية والصناعية وتجهيز الحفلات والمناسبات بلمسات إبداعية راقية.
+
             <br><br>
 
             نقدم باقات ورد مميزة، وتشريع سيارات العرسان، وتنسيق حفلات الزواج والملكة والتخرج والمواليد، بالإضافة إلى الشاشات الترحيبية وشاشات الطاولات الإلكترونية وركن الكوفي وعربيات الملكة والدعوات والأحرف البارزة الأكريليك.
@@ -172,76 +173,79 @@ function openAdmin(){
                 لنصنع لكم أجمل الذكريات في كل مناسبة 🌹
             </span>
         </p>
-           <section id="catalog" class="mb-24">
 
-    <div class="text-center mb-8">
-        <h3 class="text-3xl font-black text-gray-900">
-            دليل الخدمات والإبداع
-        </h3>
+        <!-- دليل الخدمات داخل قسم عن المحل -->
 
-        <p class="text-gray-500 mt-2">
-            اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
-        </p>
-    </div>
+        <div class="text-center mb-8 mt-12">
+            <h3 class="text-3xl font-black text-gray-900">
+                دليل الخدمات والإبداع
+            </h3>
 
-    <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
+            <p class="text-gray-500 mt-2">
+                اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
+            </p>
+        </div>
 
-        <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
-            الكل
-        </button>
+        <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
 
-        <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🌹 ورد طبيعي
-        </button>
+            <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
+                الكل
+            </button>
 
-        <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🌸 ورد صناعي
-        </button>
+            <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🌹 ورد طبيعي
+            </button>
 
-        <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🚗 سيارات عرسان
-        </button>
+            <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🌸 ورد صناعي
+            </button>
 
-        <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            👶 مواليد
-        </button>
+            <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🚗 سيارات عرسان
+            </button>
 
-        <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            💍 زواج وملكة
-        </button>
+            <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                👶 مواليد
+            </button>
 
-        <button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🎓 تخرج
-        </button>
+            <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                💍 زواج وملكة
+            </button>
 
-        <button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            📺 شاشات ترحيبية
-        </button>
+            <button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🎓 تخرج
+            </button>
 
-        <button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🖥️ شاشات طاولات
-        </button>
+            <button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                📺 شاشات ترحيبية
+            </button>
 
-        <button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            ☕ ركن كوفي
-        </button>
+            <button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🖥️ شاشات طاولات
+            </button>
 
-        <button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            👑 عربيات ملكة
-        </button>
+            <button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                ☕ ركن كوفي
+            </button>
 
-        <button onclick="filter('tablecards')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            🪪 كروت طاولة
-        </button>
+            <button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                👑 عربيات ملكة
+            </button>
 
-        <button onclick="filter('acrylic')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-            ✨ تصميم وقص أكريلك
-        </button>
+            <button onclick="filter('tablecards')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                🪪 كروت طاولة
+            </button>
 
-    </div>
+            <button onclick="filter('acrylic')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                ✨ تصميم وقص أكريليك
+            </button>
 
-    <div id="services-grid"
-         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </div>
+
+        <div id="services-grid"
+             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        </div>
+
     </div>
 
 </section>
