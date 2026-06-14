@@ -13,32 +13,89 @@
 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فلورا روز | أرقى تنسيق ورد وهدايا بالحمدانية</title>
 
-<title>فلورا روز</title>
+    <meta name="description"
+        content="فلورا روز لتنسيق الورد الطبيعي والصناعي، حفلات التخرج، سيارات العرسان، ركن كوفي، شاشات ترحيبية، وطباعة الدعوات في الحمدانية.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="keywords"
+        content="فلورا روز, ورد طبيعي, ورد صناعي, تنسيق حفلات, الحمدانية, تخرج, سيارات عرسان, ركن كوفي">
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta name="robots" content="index,follow">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="author" content="فلورا روز">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta property="og:title" content="فلورا روز | تنسيق ورد ومناسبات">
+    <meta property="og:description" content="أرقى تنسيق ورد وهدايا ومناسبات بالحمدانية">
+    <meta property="og:type" content="website">
 
-<style>
+    <!-- ضع رابط صورة الشعار -->
+    <meta property="og:image" content="logo.png.jpeg">
 
-body{
-    font-family:'Tajawal',sans-serif;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-</style>
-<script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #fffcf7;
+            scroll-behavior: smooth;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            height: 300px;
+            max-height: 350px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, .9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(224, 135, 38, .1);
+        }
+
+        .premium-shadow {
+            box-shadow: 0 25px 50px -12px rgba(224, 135, 38, .15);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #e08726 0%, #b45309 100%);
+        }
+
+        .service-img {
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform .5s ease;
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+    </style>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+    <script>
 
         let isAdmin = false;
 
@@ -128,7 +185,7 @@ body{
 
             const email = prompt("أدخل البريد الإلكتروني");
 
-            if (email === "mohammedflorarose@gmail.com") {
+            if (email === "walmaher0@gmail.com") {
 
                 isAdmin = true;
 
@@ -178,272 +235,282 @@ body{
     </script>
 
 </head>
-     
+
 <body class="text-gray-900">
 
     <!-- Floating Contact Button -->
-    <a href="https://wa.me/966536790268" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 group">
+    <a href="https://wa.me/966536790268" target="_blank"
+        class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 group">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
-<div class="flex gap-2 mt-4">
+        <div class="flex gap-2 mt-4">
 
 
 
 
-</div>    </a>
-  
+        </div>
+    </a>
+
     <!-- Navigation Header -->
     <header class="bg-white/90 border-b border-orange-100 sticky top-0 z-40 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <img src="logo.png.jpeg" onerror="this.src='https://placehold.co/100/e08726/white?text=FR'" alt="شعار فلورا روز" class="h-16 w-16 rounded-full border-2 border-orange-200 shadow-sm object-cover">
+                <img src="logo.png.jpeg" onerror="this.src='https://placehold.co/100/e08726/white?text=FR'"
+                    alt="شعار فلورا روز"
+                    class="h-16 w-16 rounded-full border-2 border-orange-200 shadow-sm object-cover">
                 <div>
                     <h1 class="text-2xl font-black text-orange-900 tracking-tight">فلورا روز</h1>
-                    <p class="text-[10px] text-orange-500 font-bold uppercase tracking-widest">Flora Rose - الحمدانية</p>
+                    <p class="text-[10px] text-orange-500 font-bold uppercase tracking-widest">Flora Rose - الحمدانية
+                    </p>
                 </div>
-                
+
             </div>
-           <nav class="flex flex-wrap gap-3 items-center justify-center">
-    <a href="#about" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">عن المحل</a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a href="#about" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">عن المحل</a>
+                <a href="#stats" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">التقييمات</a>
+                <a href="#catalog" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">الخدمات</a>
+                <a href="#booking"
+                    class="btn-gradient text-white px-6 py-3 rounded-2xl font-black text-sm shadow-lg hover:brightness-110 transition shadow-orange-900/10">اطلب
+                    الآن</a>
+            </nav>
 
-    <a href="#stats" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">التقييمات</a>
-
-    <a href="#catalog" class="font-bold text-gray-600 hover:text-orange-600 transition-colors">الخدمات</a>
-
-    <a href="#booking" class="btn-gradient text-white px-6 py-3 rounded-2xl font-black text-sm shadow-lg hover:brightness-110 transition shadow-orange-900/10">
-        اطلب الآن
-    </a>
-</nav>
-           
         </div>
-         
-     
-         <!-- Floating Contact Button -->
-  <!--   <a href="https://www.instagram.com/florarose1a?igsh=M3d0N2FpdjlsYnU2" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 group">
+
+
+        <!-- Floating Contact Button -->
+        <!--   <a href="https://www.instagram.com/florarose1a?igsh=M3d0N2FpdjlsYnU2" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all hover:scale-110 group">
         <i class="fa-brands fa-instagram text-3xl"></i>
         <span class="absolute right-20 bg-white text-green-600 px-4 py-2 rounded-xl font-bold text-sm shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">تواصل معنا الآن</span>
     </a>-->
-  
+
     </header>
-<div class="bg-white rounded-2xl shadow-md border border-orange-100 p-4 mt-4">
-    
-    <h3 class="text-center font-black text-orange-700 mb-4">
-        تابعنا على
-    </h3>
-         <!-- التواصل  Floating Contact Button -->
- 
-    <div class="flex justify-center gap-3 mt-6">
+    <div class="bg-white rounded-2xl shadow-md border border-orange-100 p-4 mt-4">
 
-    <a href="https://www.instagram.com/florarose1a" target="_blank"
-       class="px-4 py-3 rounded-xl bg-pink-50 hover:bg-pink-100 transition flex items-center gap-2">
-        <i class="fa-brands fa-instagram text-pink-600"></i>
-        <span class="font-bold">Instagram</span>
-    </a>
+        <h3 class="text-center font-black text-orange-700 mb-4">
+            تابعنا على
+        </h3>
+        <!-- التواصل  Floating Contact Button -->
 
-    <a href="https://www.tiktok.com/@.florarose1" target="_blank"
-       class="px-4 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition flex items-center gap-2">
-        <i class="fa-brands fa-tiktok"></i>
-        <span class="font-bold">TikTok</span>
-    </a>
+        <div class="flex justify-center gap-3 mt-6">
 
-    <a href="https://snapchat.com/t/RA41iIuN" target="_blank"
-       class="px-4 py-3 rounded-xl bg-yellow-50 hover:bg-yellow-100 transition flex items-center gap-2">
-        <i class="fa-brands fa-snapchat text-yellow-500"></i>
-        <span class="font-bold">Snapchat</span>
-    </a>
+            <a href="https://www.instagram.com/florarose1a" target="_blank"
+                class="px-4 py-3 rounded-xl bg-pink-50 hover:bg-pink-100 transition flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-pink-600"></i>
+                <span class="font-bold">Instagram</span>
+            </a>
 
-</div>
+            <a href="https://www.tiktok.com/@.florarose1" target="_blank"
+                class="px-4 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition flex items-center gap-2">
+                <i class="fa-brands fa-tiktok"></i>
+                <span class="font-bold">TikTok</span>
+            </a>
 
-</div>
+            <a href="https://snapchat.com/t/RA41iIuN" target="_blank"
+                class="px-4 py-3 rounded-xl bg-yellow-50 hover:bg-yellow-100 transition flex items-center gap-2">
+                <i class="fa-brands fa-snapchat text-yellow-500"></i>
+                <span class="font-bold">Snapchat</span>
+            </a>
+
+        </div>
+
+    </div>
     <main class="max-w-6xl mx-auto px-6 py-10">
-        
+
         <!-- Hero Section: Featured Work -->
-     <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
+            <div class="lg:col-span-7">
+                <span
+                    class="inline-block bg-orange-100 text-orange-800 text-xs font-black px-4 py-1.5 rounded-full mb-6">نشاركك
+                    مناسبتك بلمستنا الخاصة</span>
+                <h2 class="text-4xl lg:text-6xl font-black text-gray-900 leading-[1.2] mb-6">
+                    تصميمات <span class="text-orange-600">ورد عالمية</span> <br> في قلب الحمدانية
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <strong class="text-orange-600">فلورا روز</strong>
+                    علامة تجارية مسجلة، متخصصة في تنسيق الورود الطبيعية والصناعية وتجهيز الحفلات والمناسبات بلمسات
+                    إبداعية راقية.
+                    <br><br>
 
-    <div class="lg:col-span-12">
+                    نقدم باقات ورد مميزة، وتشريع سيارات العرسان، وتنسيق حفلات الزواج والملكة والتخرج والمواليد، بالإضافة
+                    إلى الشاشات الترحيبية وشاشات الطاولات الإلكترونية وركن الكوفي وعربيات الملكة والدعوات والأحرف
+                    البارزة الأكريليك.
 
-        <span class="inline-block bg-orange-100 text-orange-800 text-xs font-black px-4 py-1.5 rounded-full mb-6">
-            نشاركك مناسبتك بلمستنا الخاصة
-        </span>
+                    <br><br>
 
-        <h2 class="text-4xl lg:text-6xl font-black text-gray-900 leading-[1.2] mb-6">
-            تصميمات <span class="text-orange-600">ورد عالمية</span>
-            <br>
-            في قلب الحمدانية
-        </h2>
+                    <span class="font-bold text-orange-700">
+                        لنصنع لكم أجمل الذكريات في كل مناسبة 🌹
+                    </span>
+                </p>
+ <!-- Interactive Service Catalog -->
+        <section id="catalog" class="mb-24">
 
-        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-            <strong class="text-orange-600">فلورا روز</strong>
-            علامة تجارية مسجلة، متخصصة في تنسيق الورود الطبيعية والصناعية وتجهيز الحفلات والمناسبات بلمسات إبداعية راقية.
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-black text-gray-900">
+                    دليل الخدمات والإبداع
+                </h3>
 
-            <br><br>
-
-            نقدم باقات ورد مميزة، وتشريع سيارات العرسان، وتنسيق حفلات الزواج والملكة والتخرج والمواليد، بالإضافة إلى الشاشات الترحيبية وشاشات الطاولات الإلكترونية وركن الكوفي وعربيات الملكة والدعوات والأحرف البارزة الأكريليك.
-
-            <br><br>
-
-            <span class="font-bold text-orange-700">
-                لنصنع لكم أجمل الذكريات في كل مناسبة 🌹
-            </span>
-        </p>
-
-        <!-- دليل الخدمات داخل قسم عن المحل -->
-
-        <div class="text-center mb-8 mt-12">
-            <h3 class="text-3xl font-black text-gray-900">
-                دليل الخدمات والإبداع
-            </h3>
-
-            <p class="text-gray-500 mt-2">
-                اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
-            </p>
-        </div>
-
-        <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
-
-            <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
-                الكل
-            </button>
-
-            <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🌹 ورد طبيعي
-            </button>
-
-            <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🌸 ورد صناعي
-            </button>
-
-            <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🚗 سيارات عرسان
-            </button>
-
-            <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                👶 مواليد
-            </button>
-
-            <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                💍 زواج وملكة
-            </button>
-
-            <button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🎓 تخرج
-            </button>
-
-            <button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                📺 شاشات ترحيبية
-            </button>
-
-            <button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🖥️ شاشات طاولات
-            </button>
-
-            <button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                ☕ ركن كوفي
-            </button>
-
-            <button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                👑 عربيات ملكة
-            </button>
-
-            <button onclick="filter('tablecards')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                🪪 كروت طاولة
-            </button>
-
-            <button onclick="filter('acrylic')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                ✨ تصميم وقص أكريليك
-            </button>
-
-        </div>
-
-        <div id="services-grid"
-             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        </div>
-
-    </div>
-
-</section>
-        <div class="grid grid-cols-2 gap-4 mb-10">
-
-            <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm">
-                <i class="fa-solid fa-truck text-orange-500 mb-2 text-xl"></i>
-                <h4 class="font-bold text-sm">توصيل مجاني</h4>
-                <p class="text-[11px] text-gray-400">
-                    للطلبات فوق 100 ريال داخل الحمدانية
+                <p class="text-gray-500 mt-2">
+                    اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
                 </p>
             </div>
 
-            <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm">
-                <i class="fa-solid fa-moon text-orange-500 mb-2 text-xl"></i>
-                <h4 class="font-bold text-sm">خدمة ليلية</h4>
-                <p class="text-[11px] text-gray-400">
-                    نحن معكم يومياً حتى الساعة 3 صباحاً
-                </p>
+            <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
+
+                <button onclick="filter('all')"
+                    class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
+                    الكل
+                </button>
+
+                <button onclick="filter('nature')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🌹 ورد طبيعي
+                </button>
+
+                <button onclick="filter('artificial')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🌸 ورد صناعي
+                </button>
+
+                <button onclick="filter('cars')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🚗 سيارات عرسان
+                </button>
+
+                <button onclick="filter('baby')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    👶 مواليد
+                </button>
+
+                <button onclick="filter('wedding')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    💍 زواج وملكة
+                </button>
+
+                <button onclick="filter('graduation')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🎓 تخرج
+                </button>
+
+                <button onclick="filter('welcome')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    📺 شاشات ترحيبية
+                </button>
+
+                <button onclick="filter('tables')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🖥️ شاشات طاولات
+                </button>
+
+                <button onclick="filter('coffee')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    ☕ ركن كوفي
+                </button>
+
+                <button onclick="filter('queen')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    👑 عربيات ملكة
+                </button>
+
+                <button onclick="filter('printing')"
+                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+                    🖨️ دعوات وأكريليك
+                </button>
+
             </div>
 
-        </div>
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            </div>
 
-    </div>
+        </section>
 
-    <div class="lg:col-span-5 relative">
+                <div class="grid grid-cols-2 gap-4 mb-10">
+                    <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm">
+                        <i class="fa-solid fa-truck text-orange-500 mb-2 text-xl"></i>
+                        <h4 class="font-bold text-sm">توصيل مجاني</h4>
+                        <p class="text-[11px] text-gray-400">للطلبات فوق 100 ريال داخل الحمدانية</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm">
+                        <i class="fa-solid fa-moon text-orange-500 mb-2 text-xl"></i>
+                        <h4 class="font-bold text-sm">خدمة ليلية</h4>
+                        <p class="text-[11px] text-gray-400">نحن معكم يومياً حتى الساعة 3:00 ص</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#catalog"
+                        class="btn-gradient text-white text-center px-10 py-5 rounded-3xl font-black shadow-xl shadow-orange-200 transition-all hover:scale-105">استكشف
+                        الكتالوج الحقيقي</a>
+                    <a href="tel:+966536790268"
+                        class="bg-white border-2 border-orange-100 text-orange-900 text-center px-10 py-5 rounded-3xl font-black hover:bg-orange-50 transition-all">اتصل
+                        بنا مباشرة</a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-orange-100/50 rounded-full blur-3xl -z-10"></div>
+                <div
+                    class="bg-white p-4 rounded-[3rem] shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-700">
+                    <img src="edited-image.png"
+                        onerror="this.src='https://placehold.co/500x600/fdf6ed/e08726?text=Flora+Rose+Featured'"
+                        alt="تنسيق باقة ورد أحمر" class="rounded-[2.5rem] w-full shadow-inner">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-orange-50">
+                        <div class="text-orange-600 font-black text-2xl">84+</div>
+                        <div class="text-gray-400 text-xs font-bold">تقييم 5 نجوم</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="absolute -top-10 -right-10 w-64 h-64 bg-orange-100/50 rounded-full blur-3xl -z-10"></div>
-
-        <div class="bg-white p-4 rounded-[3rem] shadow-2xl rotate-3">
-
-            <img
-                src="edited-image.png"
-                alt="فلورا روز"
-                class="rounded-[2.5rem] w-full">
-
-        </div>
-
-    </div>
-
-</section>
-         
         <!-- Stats & Reviews Section -->
         <section id="stats" class="mb-24 bg-white rounded-[3rem] p-10 md:p-16 shadow-sm border border-orange-50">
             <div class="text-center mb-16">
                 <h3 class="text-3xl font-black text-orange-950 mb-4">ماذا يقول عملاؤنا؟</h3>
-                <p class="text-gray-500 max-w-2xl mx-auto italic">نحن نفتخر بخدمة أهالي الحمدانية، وهذه النتائج مبنية على مراجعاتكم الحقيقية عبر قوقل ماب.</p>
+                <p class="text-gray-500 max-w-2xl mx-auto italic">نحن نفتخر بخدمة أهالي الحمدانية، وهذه النتائج مبنية
+                    على مراجعاتكم الحقيقية عبر قوقل ماب.</p>
             </div>
-            
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-    <div class="grid grid-cols-3 gap-4 mb-8">
 
-    <div class="bg-orange-50 p-5 rounded-2xl text-center">
-        <h4 class="text-3xl font-black text-orange-600">84+</h4>
-        <p class="text-sm text-gray-500">تقييم</p>
-    </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div class="grid grid-cols-3 gap-4 mb-8">
 
-    <div class="bg-orange-50 p-5 rounded-2xl text-center">
-        <h4 class="text-3xl font-black text-orange-600">4.9</h4>
-        <p class="text-sm text-gray-500">متوسط التقييم</p>
-    </div>
+                    <div class="bg-orange-50 p-5 rounded-2xl text-center">
+                        <h4 class="text-3xl font-black text-orange-600">84+</h4>
+                        <p class="text-sm text-gray-500">تقييم</p>
+                    </div>
 
-    <div class="bg-orange-50 p-5 rounded-2xl text-center">
-        <h4 class="text-3xl font-black text-orange-600">100%</h4>
-        <p class="text-sm text-gray-500">رضا العملاء</p>
-    </div>
+                    <div class="bg-orange-50 p-5 rounded-2xl text-center">
+                        <h4 class="text-3xl font-black text-orange-600">4.9</h4>
+                        <p class="text-sm text-gray-500">متوسط التقييم</p>
+                    </div>
 
-</div>
+                    <div class="bg-orange-50 p-5 rounded-2xl text-center">
+                        <h4 class="text-3xl font-black text-orange-600">100%</h4>
+                        <p class="text-sm text-gray-500">رضا العملاء</p>
+                    </div>
+
+                </div>
                 <div class="space-y-6">
                     <div class="bg-orange-50/50 p-6 rounded-3xl border-r-8 border-orange-500">
-                        <p class="text-gray-700 font-bold mb-3 italic">"من أروع محلات الورد، الباقة طلعت أعلى من سقف توقعاتي والتعامل راقي جداً والأسعار ممتازة."</p>
+                        <p class="text-gray-700 font-bold mb-3 italic">"من أروع محلات الورد، الباقة طلعت أعلى من سقف
+                            توقعاتي والتعامل راقي جداً والأسعار ممتازة."</p>
                         <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-orange-200 flex items-center justify-center font-black text-orange-700 text-xs">A</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-orange-200 flex items-center justify-center font-black text-orange-700 text-xs">
+                                A</div>
                             <span class="text-sm font-black text-orange-900">الاء - عميل مميز</span>
                         </div>
                     </div>
                     <div class="bg-orange-50/50 p-6 rounded-3xl border-r-8 border-amber-500">
-                        <p class="text-gray-700 font-bold mb-3 italic">"ماشاء الله تبارك الله، مبدعين وتوصيلهم مجاني فوق 100 ريال.. بالتوفيق يارب!"</p>
+                        <p class="text-gray-700 font-bold mb-3 italic">"ماشاء الله تبارك الله، مبدعين وتوصيلهم مجاني فوق
+                            100 ريال.. بالتوفيق يارب!"</p>
                         <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-amber-200 flex items-center justify-center font-black text-amber-700 text-xs">N</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-amber-200 flex items-center justify-center font-black text-amber-700 text-xs">
+                                N</div>
                             <span class="text-sm font-black text-amber-900">Naz 50 - مرشد محلي</span>
                         </div>
                     </div>
                     <div class="text-center lg:text-right pt-4">
                         <div class="flex justify-center lg:justify-start gap-1 text-yellow-400 mb-2">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
                         </div>
                         <p class="text-sm font-bold text-gray-500">بناءً على 84 تقييم حقيقي بمتوسط 4.9</p>
                     </div>
@@ -451,1150 +518,1142 @@ body{
             </div>
         </section>
 
-     
-      <!-- Booking Form -->
-<section id="booking" class="mb-10">
-
-    <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
-
-        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-800/30 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
-            <div>
-
-                <h3 class="text-4xl font-black mb-6">
-                    هل أنت جاهز <br> لطلب التنسيق؟
-                </h3>
-
-                <p class="text-orange-200/80 mb-10 text-lg leading-relaxed">
-                    أخبرنا بنوع مناسبتك، وسيعمل فريق فلورا روز على تنفيذ أجمل تنسيق
-                    للورود والهدايا والحفلات بلمسات إبداعية راقية تليق بكم.
-                </p>
-
-                <div class="space-y-6">
-
-                    <div class="flex gap-4 items-center">
-
-                        <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-
-                        <p class="text-sm font-bold text-orange-100">
-                            شارع عبدالله بن أبي أمية، الحمدانية، جدة 23762
-                        </p>
-
-                    </div>
-
-                    <div class="flex gap-4 items-center">
-
-                        <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-
-                        <p class="text-xl font-black text-white" dir="ltr">
-                            +966 53 679 0268
-                        </p>
-
-                    </div>
-
+       
+        <!-- Booking Form -->
+        <section id="booking" class="mb-10">
+            <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-orange-800/30 rounded-full -mr-32 -mt-32 blur-3xl">
                 </div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-4xl font-black mb-6">هل أنت جاهز <br> لطلب التنسيق؟</h3>
+                        <p class="text-orange-200/80 mb-10 text-lg leading-relaxed">أخبرنا بنوع مناسبتك، وسيعمل فريق
+                            فلورا روز على تنفيذ أجمل تنسيق للورود والهدايا والحفلات بلمسات إبداعية راقية تليق بكم..</p>
+
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-center">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <p class="text-sm font-bold text-orange-100">شارع عبدالله بن أبي أمية، الحمدانية، جدة
+                                    23762</p>
+                            </div>
+                            <div class="flex gap-4 items-center">
+                                <div
+                                    class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <p class="text-xl font-black text-white" dir="ltr">+966 53 679 0268</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 md:p-12 rounded-[3rem] text-gray-900 shadow-inner">
+                        <form onsubmit="submitToWA(event)" class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-black text-gray-400 uppercase mb-2">اسمك الكريم</label>
+                                <input type="text" id="cust-name" required placeholder="مثال: أحمد"
+                                    class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-black text-gray-400 uppercase mb-2">الخدمة
+                                    المطلوبة</label>
+                                <select id="cust-service"
+                                    class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
+                                    <option>تنسيق ورد طبيعي</option>
+                                    <option>تنسيق ورد صناعي</option>
+                                    <option>تشريع سيارات عرسان</option>
+                                    <option>كوش أفراح وحفلات</option>
+                                    <option>تنسيق حفلات وملكة-تنسيق حفلات تخرج-تزين حفلات مواليد </option>
+
+                                    <option>شاشات ترحيبيه-شاشات طاولات الكترونيه </option>
+                                    <option>عربيات ملكه للايجار والبيع </option>
+                                    <option>طباعه دعوات و احرف اكريلك </option>
+                                    <option>ركن كوفي حسب الاختيار </option>
+                                </select>
+                            </div>
+                            <button type="submit"
+                                class="w-full btn-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-orange-100 hover:scale-[1.02] transition-transform flex justify-center items-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                إرسال الطلب للواتساب
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- لوحة إضافة المنتجات -->
+
+        <!-- لوحة إضافة المنتجات -->
+
+        <section id="admin" style="display:none" class="bg-white p-8 rounded-3xl border mt-10">
+
+            <h3 class="text-2xl font-black mb-6">
+                لوحة إضافة المنتجات
+            </h3>
+
+            <div class="grid gap-4">
+
+                <input id="newTitle" type="text" placeholder="اسم المنتج" class="border p-3 rounded-xl">
+
+                <textarea id="newDesc" placeholder="وصف المنتج" class="border p-3 rounded-xl"></textarea>
+
+                <select id="newCat" class="border p-3 rounded-xl">
+
+                    <option value="nature">ورد طبيعي</option>
+                    <option value="artificial">ورد صناعي</option>
+                    <option value="cars">سيارات عرسان</option>
+                    <option value="baby">مواليد</option>
+                    <option value="wedding">زواج</option>
+                    <option value="graduation">تخرج</option>
+                    <option value="welcome">شاشات ترحيبية</option>
+                    <option value="tables">شاشات طاولات</option>
+                    <option value="coffee">ركن كوفي</option>
+                    <option value="queen">عربيات ملكة</option>
+                    <option value="printing">دعوات وأكريليك</option>
+
+                </select>
+
+                <input id="newImage" type="file" accept="image/*" class="border p-3 rounded-xl">
+
+                <button onclick="addProduct()" class="bg-orange-600 text-white p-4 rounded-xl font-bold">
+                    إضافة المنتج
+                </button>
 
             </div>
 
-            <div class="bg-white p-8 md:p-12 rounded-[3rem] text-gray-900 shadow-inner">
+        </section>
+    </main>
 
-                <form onsubmit="submitToWA(event)" class="space-y-6">
+    <footer class="bg-[#f8f6f1] py-16 mt-10">
 
-                    <div>
+        <div class="text-center">
 
-                        <label class="block text-xs font-black text-gray-400 uppercase mb-2">
-                            اسمك الكريم
-                        </label>
+            <img src="logo.png.jpeg" onclick="secretAdmin()" alt="فلورا روز"
+                class="w-16 h-16 mx-auto mb-5 opacity-25 hover:opacity-100 transition-all duration-300 cursor-pointer object-contain">
 
-                        <input
-                            type="text"
-                            id="cust-name"
-                            required
-                            placeholder="مثال: أحمد"
-                            class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
-
-                    </div>
-
-                    <div>
-
-                        <label class="block text-xs font-black text-gray-400 uppercase mb-2">
-                            الخدمة المطلوبة
-                        </label>
-
-                        <select
-                            id="cust-service"
-                            class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
-
-                            <option>تنسيق ورد طبيعي</option>
-                            <option>تنسيق ورد صناعي</option>
-                            <option>تشريع سيارات عرسان</option>
-                            <option>تنسيق حفلات زواج وملكة</option>
-                            <option>تنسيق حفلات تخرج</option>
-                            <option>تنسيق حفلات مواليد</option>
-                            <option>شاشات ترحيبية</option>
-                            <option>شاشات طاولات إلكترونية</option>
-                            <option>ركن كوفي</option>
-                            <option>عربيات ملكة</option>
-                            <option>دعوات ومطبوعات</option>
-                            <option>كروت طاولة</option>
-                            <option>تصميم وقص أكريليك</option>
-
-                        </select>
-
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="w-full btn-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-orange-100 hover:scale-[1.02] transition-transform flex justify-center items-center gap-3">
-
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-
-                        إرسال الطلب للواتساب
-
-                    </button>
-
-                </form>
-
-            </div>
+            <p class="text-gray-400 font-bold text-xl">
+                © 2024 فلورا روز للورود والهدايا - الحمدانية، جدة
+            </p>
 
         </div>
 
-    </div>
-
-</section>
-     
-         <!-- لوحة إضافة المنتجات -->
-
-            <!-- لوحة إضافة المنتجات -->
-
-<section id="admin"
-style="display:none"
-class="bg-white p-8 rounded-3xl border mt-10">
-
-<h3 class="text-2xl font-black mb-6">
-لوحة إضافة المنتجات
-</h3>
-
-<div class="grid gap-4">
-
-<input
-id="newTitle"
-type="text"
-placeholder="اسم المنتج"
-class="border p-3 rounded-xl">
-
-<textarea
-id="newDesc"
-placeholder="وصف المنتج"
-class="border p-3 rounded-xl"></textarea>
-
-<select
-id="newCat"
-class="border p-3 rounded-xl">
-
-<option value="nature">🌹 ورد طبيعي</option>
-<option value="artificial">🌸 ورد صناعي</option>
-<option value="cars">🚗 سيارات عرسان</option>
-<option value="baby">👶 مواليد</option>
-<option value="wedding">💍 زواج وملكة</option>
-<option value="graduation">🎓 تخرج</option>
-<option value="welcome">📺 شاشات ترحيبية</option>
-<option value="tables">🖥️ شاشات طاولات</option>
-<option value="coffee">☕ ركن كوفي</option>
-<option value="queen">👑 عربيات ملكة</option>
-<option value="tablecards">🪪 كروت طاولة</option>
-<option value="acrylic">✨تصميم وقص أكريلك</option>
-
-</select>
-
-<input
-id="newImage"
-type="file"
-accept="image/*"
-class="border p-3 rounded-xl">
-
-<button
-onclick="addProduct()"
-class="bg-orange-600 text-white p-4 rounded-xl font-bold">
-إضافة المنتج
-</button>
-
-</div>
-
-</section>
-    </main>
-
-   <footer class="bg-[#f8f6f1] py-16 mt-10">
-
-    <div class="text-center">
-
-        <img
-    src="logo.png.jpeg"
-    onclick="openAdmin()"
-    alt="فلورا روز"
-    class="w-16 h-16 mx-auto mb-5 opacity-25 hover:opacity-100 transition-all duration-300 cursor-pointer object-contain">
-        <p class="text-gray-400 font-bold text-xl">
-            © 2024 فلورا روز للورود والهدايا - الحمدانية، جدة
-        </p>
-
-    </div>
-
-</footer>
+    </footer>
 
     <script>
         const services = [
 
-/* ===========================
-   الورود الطبيعية
-=========================== */
+            /* ===========================
+               الورود الطبيعية
+            =========================== */
 
-{
-id: 1,
-cat: 'nature',
-title: 'باقة ورد الجوري الملكية',
-img: 'nature1.jpg',
-icon: 'fa-leaf',
-desc: 'تنسيق فاخر من الجوري الأحمر الطبيعي.'
-},
+            {
+                id: 1,
+                cat: 'nature',
+                title: 'باقة ورد الجوري الملكية',
+                img: 'nature1.jpg',
+                icon: 'fa-leaf',
+                desc: 'تنسيق فاخر من الجوري الأحمر الطبيعي.'
+            },
 
-{
-id: 2,
-cat: 'nature',
-title: 'باقة ورد اهداء خاص  ',
-img: 'nature2.jpg',
-icon: 'fa-leaf',
-desc: 'تنسيق هدايا التخرج .'
-},
+            {
+                id: 2,
+                cat: 'nature',
+                title: 'باقة ورد اهداء خاص  ',
+                img: 'nature2.jpg',
+                icon: 'fa-leaf',
+                desc: 'تنسيق هدايا التخرج .'
+            },
 
-{
-id: 3,
-cat: 'nature',
-title: 'باقة الورد الاصفر الملكي',
-img: 'nature3.jpg',
-icon: 'fa-leaf',
-desc: 'تنسيق باقه.'
-},
+            {
+                id: 3,
+                cat: 'nature',
+                title: 'باقة الورد الاصفر الملكي',
+                img: 'nature3.jpg',
+                icon: 'fa-leaf',
+                desc: 'تنسيق باقه.'
+            },
 
-{
-id: 4,
-cat: 'nature',
-title: 'باقة الحب الابدي',
-img: 'nature4.jpg',
-icon: 'fa-leaf',
-desc: ' تنسيق ورد طبيعي فاخر.'
-},
+            {
+                id: 4,
+                cat: 'nature',
+                title: 'باقة الحب الابدي',
+                img: 'nature4.jpg',
+                icon: 'fa-leaf',
+                desc: ' تنسيق ورد طبيعي فاخر.'
+            },
 
-{
-id: 5,
-cat: 'nature',
-title: 'باقة الجود ',
-img: 'nature5.jpg',
-icon: 'fa-leaf',
-desc: 'تنسيق ورد طبيعي فاخر.'
-},
+            {
+                id: 5,
+                cat: 'nature',
+                title: 'باقة الجود ',
+                img: 'nature5.jpg',
+                icon: 'fa-leaf',
+                desc: 'تنسيق ورد طبيعي فاخر.'
+            },
 
-{
-id: 6,
-cat: 'nature',
-title: 'باقة ورد بلمسه راقيه',
-img: 'nature6.jpg',
-icon: 'fa-leaf',
-desc: 'باقة مميزة.'
-},
+            {
+                id: 6,
+                cat: 'nature',
+                title: 'باقة ورد بلمسه راقيه',
+                img: 'nature6.jpg',
+                icon: 'fa-leaf',
+                desc: 'باقة مميزة.'
+            },
 
-{
-id: 7,
-cat: 'nature',
-title: 'باقة المناسبات',
-img: 'nature7.jpg',
-icon: 'fa-leaf',
-desc: 'تنسيق ورد طبيعي لجميع المناسبات.'
-},
+            {
+                id: 7,
+                cat: 'nature',
+                title: 'باقة المناسبات',
+                img: 'nature7.jpg',
+                icon: 'fa-leaf',
+                desc: 'تنسيق ورد طبيعي لجميع المناسبات.'
+            },
 
+            {
+                id: 8,
+                cat: 'nature',
+                title: 'باقة ورد حسب الطلب',
+                img: 'nature8.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 9,
+                cat: 'nature',
+                title: 'باقة ورد الاميرات',
+                img: 'nature9.jpg',
+                icon: 'fa-leaf',
+                desc: 'باقه مميزه للهدايا.'
+            },
+
+            {
+                id: 10,
+                cat: 'nature',
+                title: 'باقة ورد بتنسيق حصري',
+                img: 'nature10.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 11,
+                cat: 'nature',
+                title: 'باقة ورد اهداء خاص',
+                img: 'nature11.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 12,
+                cat: 'nature',
+                title: 'باقة ورد بتنسيق راقي',
+                img: 'nature12.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم راقي من فلورا روز.'
+            },
+
+            {
+                id: 13,
+                cat: 'nature',
+                title: 'باقة بستان فلورا ',
+                img: 'nature13.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 14,
+                cat: 'nature',
+                title: 'باقة الارجوان الملكي ',
+                img: 'nature14.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم همس الارجوان.'
+            },
+
+            {
+                id: 15,
+                cat: 'nature',
+                title: 'باقة ورد اهداء خاص',
+                img: 'nature15.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 16,
+                cat: 'nature',
+                title: 'باقة اشراقة التوليب',
+                img: 'nature16.jpg',
+                icon: 'fa-leaf',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+
+            {
+                id: 17,
+                cat: 'artificial',
+                title: ' باقه مباركه فاخرة',
+                img: 'artificial1.jpg',
+                icon: 'fa-seedling',
+                desc: 'باقة ورد صناعي بتصميم فاخر يدوم طويلاً.'
+            },
+
+            {
+                id: 18,
+                cat: 'artificial',
+                title: 'باقة ورد ذهبيه',
+                img: 'artificial2.jpg',
+                icon: 'fa-seedling',
+                desc: 'تنسيق أنيق من فلورا روز .'
+            },
+
+            {
+                id: 19,
+                cat: 'artificial',
+                title: 'سحر الاوركيد الازرق',
+                img: 'artificial3.jpg',
+                icon: 'fa-seedling',
+                desc: ' تصميم بلمسات راقيه.'
+            },
+
+            {
+                id: 20,
+                cat: 'artificial',
+                title: 'فازة السعادة ',
+                img: 'artificial4.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم مميز للهدايا والمناسبات.'
+            },
+
+            {
+                id: 21,
+                cat: 'artificial',
+                title: 'رقة الانتوريوم',
+                img: 'artificial5.jpg',
+                icon: 'fa-seedling',
+                desc: 'بوكس ورد صناعي فاخر .'
+            },
+
+            {
+                id: 22,
+                cat: 'artificial',
+                title: 'باقة الملكة الصناعية',
+                img: 'artificial6.jpg',
+                icon: 'fa-seedling',
+                desc: 'تنسيق فاخر للمناسبات الخاصة.'
+            },
+
+            {
+                id: 23,
+                cat: 'artificial',
+                title: 'تنسيق هدايا',
+                img: 'artificial7.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم كلاسيكي أنيق يدوم طويلاً.'
+            },
+
+            {
+                id: 24,
+                cat: 'artificial',
+                title: 'باقة ورد صناعي',
+                img: 'artificial8.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم حصري من فلورا روز.'
+            },
+            {
+                id: 25,
+                cat: 'artificial',
+                title: 'باقة ورد صناعيه فخمة',
+                img: 'artificial9.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم فاخر من فلورا روز.'
+            },
+            {
+                id: 26,
+                cat: 'artificial',
+                title: 'مسكة عروسة راقية',
+                img: 'artificial10.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم فاخر من فلورا روز.'
+            },
+            {
+                id: 27,
+                cat: 'artificial',
+                title: 'مسكه انيقه',
+                img: 'artificial11.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم فاخر من فلورا روز.'
+            },
+            {
+                id: 28,
+                cat: 'artificial',
+                title: 'مسكة ورد بتصميم انيق ',
+                img: 'artificial12.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم فاخر من فلورا روز.'
+            },
+            {
+                id: 29,
+                cat: 'artificial',
+                title: 'فازة ورد صناعيه راقيه ',
+                img: 'artificial13.jpg',
+                icon: 'fa-seedling',
+                desc: 'تصميم فاخر من فلورا روز.'
+            },     /*
 {
-id: 8,
-cat: 'nature',
-title: 'باقة ورد حسب الطلب',
-img: 'nature8.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-},
-             
-{
-id: 9,
-cat: 'nature',
-title: 'باقة ورد الاميرات',
-img: 'nature9.jpg',
-icon: 'fa-leaf',
-desc: 'باقه مميزه للهدايا.'
-},
-             
-{
-id: 10,
-cat: 'nature',
-title: 'باقة ورد بتنسيق حصري',
-img: 'nature10.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-},
-             
-{
-id: 11,
-cat: 'nature',
-title: 'باقة ورد اهداء خاص',
-img: 'nature11.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-},
-             
-{
-id: 12,
-cat: 'nature',
-title: 'باقة ورد بتنسيق راقي',
-img: 'nature12.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم راقي من فلورا روز.'
-},
-             
-{
-id: 13,
-cat: 'nature',
-title: 'باقة بستان فلورا ',
-img: 'nature13.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-},
-             
-{
-id: 14,
-cat: 'nature',
-title: 'باقة الارجوان الملكي ',
-img: 'nature14.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم همس الارجوان.'
-},
-             
-{
-id: 15,
-cat: 'nature',
-title: 'باقة ورد اهداء خاص',
-img: 'nature15.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-}, 
-             
-{
-id: 16,
-cat: 'nature',
-title: 'باقة اشراقة التوليب',
-img: 'nature16.jpg',
-icon: 'fa-leaf',
-desc: 'تصميم حصري من فلورا روز.'
-}, 
-             
-{
-id: 17,
+id: 30,
 cat: 'artificial',
-title: ' باقه مباركه فاخرة',
-img: 'artificial1.jpg',
-icon: 'fa-seedling',
-desc: 'باقة ورد صناعي بتصميم فاخر يدوم طويلاً.'
-},
-
-{
-id: 18,
-cat: 'artificial',
-title: 'باقة ورد ذهبيه',
-img: 'artificial2.jpg',
-icon: 'fa-seedling',
-desc: 'تنسيق أنيق من فلورا روز .'
-},
-
-{
-id: 19,
-cat: 'artificial',
-title: 'سحر الاوركيد الازرق',
-img: 'artificial3.jpg',
-icon: 'fa-seedling',
-desc: ' تصميم بلمسات راقيه.'
-},
-
-{
-id: 20,
-cat: 'artificial',
-title: 'فازة السعادة ',
-img: 'artificial4.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم مميز للهدايا والمناسبات.'
-},
-
-{
-id: 21,
-cat: 'artificial',
-title: 'رقة الانتوريوم',
-img: 'artificial5.jpg',
-icon: 'fa-seedling',
-desc: 'بوكس ورد صناعي فاخر .'
-},
-
-{
-id: 22,
-cat: 'artificial',
-title: 'باقة الملكة الصناعية',
-img: 'artificial6.jpg',
-icon: 'fa-seedling',
-desc: 'تنسيق فاخر للمناسبات الخاصة.'
-},
-
-{
-id: 23,
-cat: 'artificial',
-title: 'تنسيق هدايا',
-img: 'artificial7.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم كلاسيكي أنيق يدوم طويلاً.'
-},
-
-{
-id: 24,
-cat: 'artificial',
-title: 'باقة ورد صناعي',
-img: 'artificial8.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم حصري من فلورا روز.'
-},   
-{
-id: 25,
-cat: 'artificial',
-title: 'باقة ورد صناعيه فخمة',
-img: 'artificial9.jpg',
+title: 'باقة فلورا الصناعية',
+img: 'artificial14.jpg',
 icon: 'fa-seedling',
 desc: 'تصميم فاخر من فلورا روز.'
 },  
+            
 {
-id: 26,
+id: 31,
 cat: 'artificial',
-title: 'مسكة عروسة راقية',
-img: 'artificial10.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-}, 
-{
-id: 27,
-cat: 'artificial',
-title: 'مسكه انيقه',
-img: 'artificial11.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-}, 
-{
-id: 28,
-cat: 'artificial',
-title: 'مسكة ورد بتصميم انيق ',
-img: 'artificial12.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-}, 
-{
-id: 29,
-cat: 'artificial',
-title: 'فازة ورد صناعيه راقيه ',
-img: 'artificial13.jpg',
+title: 'باقة فلورا الصناعية',
+img: 'artificial15.jpg',
 icon: 'fa-seedling',
 desc: 'تصميم فاخر من فلورا روز.'
 },    
-/* ===========================
-   تشريع سيارات العرسان
-=========================== */
+{
+id: 32,
+cat: 'artificial',
+title: 'باقة فلورا الصناعية',
+img: 'artificial16.jpg',
+icon: 'fa-seedling',
+desc: 'تصميم فاخر من فلورا روز.'
+},    
+{
+id: 33,
+cat: 'artificial',
+title: 'باقة فلورا الصناعية',
+img: 'artificial17.jpg',
+icon: 'fa-seedling',
+desc: 'تصميم فاخر من فلورا روز.'
+},    
+{
+id: 34,
+cat: 'artificial',
+title: 'باقة فلورا الصناعية',
+img: 'artificial18.jpg',
+icon: 'fa-seedling',
+desc: 'تصميم فاخر من فلورا روز.'
+},    
+{
+id: 35,
+cat: 'artificial',
+title: 'باقة فلورا الصناعية',
+img: 'artificial19.jpg',
+icon: 'fa-seedling',
+desc: 'تصميم فاخر من فلورا روز.'
+},    */
+            /* ===========================
+               تشريع سيارات العرسان
+            =========================== */
 
-{
-id: 36,
-cat: 'cars',
-title: 'تشريع سيارة عريس كلاسيكي',
-img: 'car1.jpg',
-icon: 'fa-car',
-desc: 'تنسيق أنيق لسيارة العريس بالورود الطبيعية.'
-},
+            {
+                id: 36,
+                cat: 'cars',
+                title: 'تشريع سيارة عريس كلاسيكي',
+                img: 'car1.jpg',
+                icon: 'fa-car',
+                desc: 'تنسيق أنيق لسيارة العريس بالورود الطبيعية.'
+            },
 
-{
-id: 37,
-cat: 'cars',
-title: 'تشريع سيارة عروس فاخرة',
-img: 'car2.jpg',
-icon: 'fa-car',
-desc: 'تصميم فاخر بالورود ولمسات راقية.'
-},
+            {
+                id: 37,
+                cat: 'cars',
+                title: 'تشريع سيارة عروس فاخرة',
+                img: 'car2.jpg',
+                icon: 'fa-car',
+                desc: 'تصميم فاخر بالورود ولمسات راقية.'
+            },
 
-{
-id: 38,
-cat: 'cars',
-title: 'تشريع سيارة بالورد الأبيض',
-img: 'car3.jpg',
-icon: 'fa-car',
-desc: 'تنسيق مميز بالورود البيضاء للمناسبات الراقية.'
-},
+            {
+                id: 38,
+                cat: 'cars',
+                title: 'تشريع سيارة بالورد الأبيض',
+                img: 'car3.jpg',
+                icon: 'fa-car',
+                desc: 'تنسيق مميز بالورود البيضاء للمناسبات الراقية.'
+            },
 
-{
-id: 39,
-cat: 'cars',
-title: 'تشريع سيارة بالورد الأحمر',
-img: 'car4.jpg',
-icon: 'fa-car',
-desc: 'تصميم رومانسي بالورود الحمراء.'
-},
+            {
+                id: 39,
+                cat: 'cars',
+                title: 'تشريع سيارة بالورد الأحمر',
+                img: 'car4.jpg',
+                icon: 'fa-car',
+                desc: 'تصميم رومانسي بالورود الحمراء.'
+            },
 
-{
-id: 40,
-cat: 'cars',
-title: 'تشريع سيارة VIP',
-img: 'car5.jpg',
-icon: 'fa-car',
-desc: 'تنسيق فاخر للعرسان بأحدث التصاميم.'
-},
+            {
+                id: 40,
+                cat: 'cars',
+                title: 'تشريع سيارة VIP',
+                img: 'car5.jpg',
+                icon: 'fa-car',
+                desc: 'تنسيق فاخر للعرسان بأحدث التصاميم.'
+            },
 
-{
-id: 41,
-cat: 'cars',
-title: 'تشريع سيارة ملكية',
-img: 'car6.jpg',
-icon: 'fa-car',
-desc: 'تصميم ملكي فاخر يناسب المناسبات الخاصة.'
-},
+            {
+                id: 41,
+                cat: 'cars',
+                title: 'تشريع سيارة ملكية',
+                img: 'car6.jpg',
+                icon: 'fa-car',
+                desc: 'تصميم ملكي فاخر يناسب المناسبات الخاصة.'
+            },
 
-{
-id: 42,
-cat: 'cars',
-title: 'تشريع سيارة حديثة',
-img: 'car7.jpg',
-icon: 'fa-car',
-desc: 'تنسيق عصري بلمسات إبداعية.'
-},
+            {
+                id: 42,
+                cat: 'cars',
+                title: 'تشريع سيارة حديثة',
+                img: 'car7.jpg',
+                icon: 'fa-car',
+                desc: 'تنسيق عصري بلمسات إبداعية.'
+            },
+            /*
+            {
+            id: 43,
+            cat: 'cars',
+            title: 'تشريع سيارة فلورا روز',
+            img: 'car8.jpg',
+            icon: 'fa-car',
+            desc: 'تصميم حصري من فلورا روز.'
+            },*/
+            /* ===========================
+          حفلات المواليد
+       =========================== */
 
-     /* ===========================
-   حفلات المواليد
-=========================== */
+            {
+                id: 44,
+                cat: 'baby',
+                title: 'تنسيق استقبال مولود',
+                img: 'baby1.jpg',
+                icon: 'fa-baby',
+                desc: 'تنسيق مميز لاستقبال المولود الجديد.'
+            },
 
-{
-id: 44,
-cat: 'baby',
-title: 'تنسيق استقبال مولود',
-img: 'baby1.jpg',
-icon: 'fa-baby',
-desc: 'تنسيق مميز لاستقبال المولود الجديد.'
-},
+            {
+                id: 45,
+                cat: 'baby',
+                title: 'تنسيق استقبال مولود',
+                img: 'baby2.jpg',
+                icon: 'fa-baby',
+                desc: 'تجهيز كامل لحفلات المواليد بلمسات راقية.'
+            },
 
-{
-id: 45,
-cat: 'baby',
-title: 'تنسيق استقبال مولود',
-img: 'baby2.jpg',
-icon: 'fa-baby',
-desc: 'تجهيز كامل لحفلات المواليد بلمسات راقية.'
-},
+            {
+                id: 46,
+                cat: 'baby',
+                title: 'ركن تصوير المولود',
+                img: 'baby3.jpg',
+                icon: 'fa-baby',
+                desc: 'تنسيق استقبال المواليد بأجمل التصاميم.'
+            },
 
-{
-id: 46,
-cat: 'baby',
-title: 'ركن تصوير المولود',
-img: 'baby3.jpg',
-icon: 'fa-baby',
-desc: 'تنسيق استقبال المواليد بأجمل التصاميم.'
-},
+            {
+                id: 47,
+                cat: 'baby',
+                title: 'تنسيق استقبال مولود',
+                img: 'baby4.jpg',
+                icon: 'fa-baby',
+                desc: 'تنسيق راقي.'
+            },
 
-{
-id: 47,
-cat: 'baby',
-title: 'تنسيق استقبال مولود',
-img: 'baby4.jpg',
-icon: 'fa-baby',
-desc: 'تنسيق راقي.'
-},
+            {
+                id: 48,
+                cat: 'baby',
+                title: 'تنسيق مواليد ازرق',
+                img: 'baby5.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة للمواليد الاولاد.'
+            },
 
-{
-id: 48,
-cat: 'baby',
-title: 'تنسيق مواليد ازرق',
-img: 'baby5.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة للمواليد الاولاد.'
-},
+            {
+                id: 49,
+                cat: 'baby',
+                title: 'تنسيق مواليد خاص',
+                img: 'baby6.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة للمواليد الأولاد.'
+            },
+            {
+                id: 50,
+                cat: 'baby',
+                title: 'تنسيق مواليد فاخر',
+                img: 'baby7.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة للمواليد الأولاد.'
+            },
+            {
+                id: 51,
+                cat: 'baby',
+                title: 'تنسيق مواليد وردي',
+                img: 'baby8.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة للمواليد البنات.'
+            },
+            {
+                id: 52,
+                cat: 'baby',
+                title: 'تنسيق مواليد بلمسه راقيه',
+                img: 'baby9.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة للمواليد البنات.'
+            },
+            {
+                id: 53,
+                cat: 'baby',
+                title: 'تنسيق مواليد حسب الطلب',
+                img: 'baby10.jpg',
+                icon: 'fa-baby',
+                desc: 'ديكورات خاصة من فلورا روز.'
+            },
+            /* ===========================
+            حفلات زواج وملكة
+         =========================== */
 
-{
-id: 49,
-cat: 'baby',
-title: 'تنسيق مواليد خاص',
-img: 'baby6.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة للمواليد الأولاد.'
-},
-{
-id: 50,
-cat: 'baby',
-title: 'تنسيق مواليد فاخر',
-img: 'baby7.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة للمواليد الأولاد.'
-},
-{
-id: 51,
-cat: 'baby',
-title: 'تنسيق مواليد وردي',
-img: 'baby8.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة للمواليد البنات.'
-},
-{
-id: 52,
-cat: 'baby',
-title: 'تنسيق مواليد بلمسه راقيه',
-img: 'baby9.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة للمواليد البنات.'
-},
-{
-id: 53,
-cat: 'baby',
-title: 'تنسيق مواليد حسب الطلب',
-img: 'baby10.jpg',
-icon: 'fa-baby',
-desc: 'ديكورات خاصة من فلورا روز.'
-},
-   /* ===========================
-   حفلات زواج وملكة
-=========================== */
+            {
+                id: 54,
+                cat: 'wedding',
+                title: 'تنسيق حفل زفاف',
+                img: 'wedding1.jpg',
+                icon: 'fa-ring',
+                desc: ' تنسيق راقي لحفلات الزفاف .'
+            },
 
+            {
+                id: 55,
+                cat: 'wedding',
+                title: 'كوشة حفل منزلي',
+                img: 'wedding2.jpg',
+                icon: 'fa-ring',
+                desc: 'تصميم وتجهيز حفلات الزواج بأحدث الأفكار.'
+            },
+
+            {
+                id: 56,
+                cat: 'wedding',
+                title: 'تنسيق حفلات',
+                img: 'wedding3.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق فاخر.'
+            },
+
+            {
+                id: 57,
+                cat: 'wedding',
+                title: 'ديكور العروسه المنتظرة',
+                img: 'wedding4.jpg',
+                icon: 'fa-ring',
+                desc: 'تصميم فاحر يناسب جميع المناسبات.'
+            },
+
+            {
+                id: 58,
+                cat: 'wedding',
+                title: 'تنسيق طاولات',
+                img: 'wedding5.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق ورود مميز لحفلات الملكة والزفاف.'
+            },
+
+            {
+                id: 59,
+                cat: 'wedding',
+                title: 'تنسيق متكامل للحفلات',
+                img: 'wedding6.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 60,
+                cat: 'wedding',
+                title: 'تنسيق كوش زفاف',
+                img: 'wedding7.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 61,
+                cat: 'wedding',
+                title: 'تنسيق كوش زفاف ',
+                img: 'wedding8.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 62,
+                cat: 'wedding',
+                title: 'تنسيق حفل زفاف فاخر',
+                img: 'wedding9.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 63,
+                cat: 'wedding',
+                title: 'تنسيق حفل بلمسه راقيه ',
+                img: 'wedding10.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 64,
+                cat: 'wedding',
+                title: 'تنسيق كوش حسب الطلب',
+                img: 'wedding11.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 65,
+                cat: 'wedding',
+                title: 'تنسيق كوش حسب الطلب',
+                img: 'wedding12.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 66,
+                cat: 'wedding',
+                title: 'تنسيق حفل زفاف ملكي',
+                img: 'wedding13.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 67,
+                cat: 'wedding',
+                title: 'تنسيق حفل زواج راقي',
+                img: 'wedding14.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            {
+                id: 68,
+                cat: 'wedding',
+                title: 'تنسيق كوشة ملكة فاخرة',
+                img: 'wedding15.jpg',
+                icon: 'fa-ring',
+                desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
+            },
+            /*
 {
-id: 54,
+id: 69,
 cat: 'wedding',
-title: 'تنسيق حفل زفاف',
-img: 'wedding1.jpg',
-icon: 'fa-ring',
-desc: ' تنسيق راقي لحفلات الزفاف .'
-},
-
-{
-id: 55,
-cat: 'wedding',
-title: 'كوشة حفل منزلي',
-img: 'wedding2.jpg',
-icon: 'fa-ring',
-desc: 'تصميم وتجهيز حفلات الزواج بأحدث الأفكار.'
-},
-
-{
-id: 56,
-cat: 'wedding',
-title: 'تنسيق حفلات',
-img: 'wedding3.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق فاخر.'
-},
-
-{
-id: 57,
-cat: 'wedding',
-title: 'ديكور العروسه المنتظرة',
-img: 'wedding4.jpg',
-icon: 'fa-ring',
-desc: 'تصميم فاحر يناسب جميع المناسبات.'
-},
-
-{
-id: 58,
-cat: 'wedding',
-title: 'تنسيق طاولات',
-img: 'wedding5.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق ورود مميز لحفلات الملكة والزفاف.'
-},
-
-{
-id: 59,
-cat: 'wedding',
-title: 'تنسيق متكامل للحفلات',
-img: 'wedding6.jpg',
+title: 'حفل زواج فلورا روز',
+img: 'wedding16.jpg',
 icon: 'fa-ring',
 desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
 },
 {
-id: 60,
+id: 70,
 cat: 'wedding',
-title: 'تنسيق كوش زفاف',
-img: 'wedding7.jpg',
+title: 'حفل زواج فلورا روز',
+img: 'wedding17.jpg',
 icon: 'fa-ring',
 desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 61,
-cat: 'wedding',
-title: 'تنسيق كوش زفاف ',
-img: 'wedding8.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 62,
-cat: 'wedding',
-title: 'تنسيق حفل زفاف فاخر',
-img: 'wedding9.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 63,
-cat: 'wedding',
-title: 'تنسيق حفل بلمسه راقيه ',
-img: 'wedding10.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 64,
-cat: 'wedding',
-title: 'تنسيق كوش حسب الطلب',
-img: 'wedding11.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 65,
-cat: 'wedding',
-title: 'تنسيق كوش حسب الطلب',
-img: 'wedding12.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
- {
-id: 66,
-cat: 'wedding',
-title: 'تنسيق حفل زفاف ملكي',
-img: 'wedding13.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
- {
-id: 67,
-cat: 'wedding',
-title: 'تنسيق حفل زواج راقي',
-img: 'wedding14.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-{
-id: 68,
-cat: 'wedding',
-title: 'تنسيق كوشة ملكة فاخرة',
-img: 'wedding15.jpg',
-icon: 'fa-ring',
-desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
-},
-             
-      /* ===========================
-   حفلات التخرج
+},*/
+            /* ===========================
+         حفلات التخرج
+      =========================== */
+
+            {
+                id: 71,
+                cat: 'graduation',
+                title: 'تنسيق حفل تخرج ',
+                img: 'graduation1.jpg',
+                icon: 'fa-graduation-cap',
+                desc: 'تنسيق مميز لحفلات التخرج بلمسات احترافية.'
+            },
+
+            {
+                id: 72,
+                cat: 'graduation',
+                title: 'تنسيق حفل تخرج',
+                img: 'graduation2.jpg',
+                icon: 'fa-graduation-cap',
+                desc: ' تنسيق مميز لحفلات التخرج .'
+            },
+
+            {
+                id: 73,
+                cat: 'graduation',
+                title: 'تنسيق حفل تخرج',
+                img: 'graduation3.jpg',
+                icon: 'fa-graduation-cap',
+                desc: 'تصميم ركن تصوير خاص بمناسبة التخرج.'
+            },
+
+            {
+                id: 74,
+                cat: 'graduation',
+                title: 'تنسيق حفل تخرج',
+                img: 'graduation4.jpg',
+                icon: 'fa-graduation-cap',
+                desc: 'تنسيق مميز.'
+            },
+
+            {
+                id: 75,
+                cat: 'graduation',
+                title: ' تنسيق خلفية حفل تخرج',
+                img: 'graduation5.jpg',
+                icon: 'fa-graduation-cap',
+                desc: 'خلفيات وديكورات فاخرة لحفلات التخرج.'
+            },
+
+            {
+                id: 76,
+                cat: 'graduation',
+                title: 'حفل تخرج فلورا روز',
+                img: 'graduation6.jpg',
+                icon: 'fa-graduation-cap',
+                desc: 'تنسيق متكامل لحفلات التخرج والمناسبات التعليمية.'
+            },
+            /* ===========================
+  الشاشات الترحيبية
 =========================== */
 
-{
-id: 71,
-cat: 'graduation',
-title: 'تنسيق حفل تخرج ',
-img: 'graduation1.jpg',
-icon: 'fa-graduation-cap',
-desc: 'تنسيق مميز لحفلات التخرج بلمسات احترافية.'
-},
-
-{
-id: 72,
-cat: 'graduation',
-title: 'تنسيق حفل تخرج',
-img: 'graduation2.jpg',
-icon: 'fa-graduation-cap',
-desc: ' تنسيق مميز لحفلات التخرج .'
-},
-
-{
-id: 73,
-cat: 'graduation',
-title: 'تنسيق حفل تخرج',
-img: 'graduation3.jpg',
-icon: 'fa-graduation-cap',
-desc: 'تصميم ركن تصوير خاص بمناسبة التخرج.'
-},
-
-{
-id: 74,
-cat: 'graduation',
-title: 'تنسيق حفل تخرج',
-img: 'graduation4.jpg',
-icon: 'fa-graduation-cap',
-desc: 'تنسيق مميز.'
-},
-
-{
-id: 75,
-cat: 'graduation',
-title: ' تنسيق خلفية حفل تخرج',
-img: 'graduation5.jpg',
-icon: 'fa-graduation-cap',
-desc: 'خلفيات وديكورات فاخرة لحفلات التخرج.'
-},
-
-    
-/* ===========================
-   الشاشات الترحيبية
+            {
+                id: 77,
+                cat: 'welcome',
+                title: 'شاشة ترحيبية فاخرة',
+                img: 'welcome1.jpg',
+                icon: 'fa-tv',
+                desc: 'شاشة ترحيبية مميزة لاستقبال الضيوف.'
+            },
+            /*
+            {
+            id: 53,
+            cat: 'welcome',
+            title: 'شاشة استقبال زفاف',
+            img: 'welcome2.jpg',
+            icon: 'fa-tv',
+            desc: 'تصميم شاشة ترحيبية لحفلات الزواج والملكة.'
+            },
+            
+            {
+            id: 54,
+            cat: 'welcome',
+            title: 'شاشة استقبال تخرج',
+            img: 'welcome3.jpg',
+            icon: 'fa-tv',
+            desc: 'شاشة خاصة بحفلات التخرج والمناسبات.'
+            },
+            
+            {
+            id: 55,
+            cat: 'welcome',
+            title: 'شاشة استقبال مواليد',
+            img: 'welcome4.jpg',
+            icon: 'fa-tv',
+            desc: 'تصميم مميز لاستقبال المواليد.'
+            },
+            /* 
+            {
+            id: 56,
+            cat: 'welcome',
+            title: 'شاشة مناسبات خاصة',
+            img: 'welcome5.jpg',
+            icon: 'fa-tv',
+            desc: 'شاشات احترافية لجميع المناسبات.'
+            },
+            
+            {
+            id: 57,
+            cat: 'welcome',
+            title: 'شاشة فلورا روز',
+            img: 'welcome6.jpg',
+            icon: 'fa-tv',
+            desc: 'تصميم حصري من فلورا روز.'
+            },*/
+            /* ===========================
+  شاشات الطاولات الإلكترونية
 =========================== */
- 
-{
-id: 77,
-cat: 'welcome',
-title: 'شاشة ترحيبية فاخرة',
-img: 'welcome1.jpg',
-icon: 'fa-tv',
-desc: 'شاشة ترحيبية مميزة لاستقبال الضيوف.'
-},
-
-{
-id: 78,
-cat: 'tables',
-title: 'شاشة طاولة فلورا روز',
-img: 'table6.jpg',
-icon: 'fa-display',
-desc: 'تصميم حصري ومميز من فلورا روز.'
-},
-{
-id: 79,
-cat: 'tables',
-title: 'شاشة طاولة فلورا روز',
-img: 'table7.jpg',
-icon: 'fa-display',
-desc: 'تصميم حصري ومميز من فلورا روز.'
-},
-{
-id: 80,
-cat: 'tables',
-title: 'شاشة طاولة فلورا روز',
-img: 'table8.jpg',
-icon: 'fa-display',
-desc: 'تصميم حصري ومميز من فلورا روز.'
-},
-
-             /* ===========================
-   ركن كوفي
-=========================== */
-
-{
-id: 81,
-cat: 'coffee',
-title: 'ركن كوفي كلاسيكي',
-img: 'coffee1.jpg',
-icon: 'fa-mug-hot',
-desc: 'ركن كوفي أنيق بمشروبين حسب اختيار العميل.'
-},
-
-{
-id: 82,
-cat: 'coffee',
-title: 'ركن كوفي للمناسبات',
-img: 'coffee2.jpg',
-icon: 'fa-mug-hot',
-desc: 'تجهيز ركن كوفي متكامل للحفلات والمناسبات.'
-},
-
-
- /* ===========================
-   عربيات ملكة
-=========================== */
-/* ===========================
-   عربيات ملكة
-=========================== */
-
-{
-id: 83,
-cat: 'queen',
-title: 'عربية ملكة فاخرة',
-img: 'queen2.jpg',
-icon: 'fa-crown',
-desc: 'تصميم فاخر يضيف لمسة مميزة على الحفل.'
-},
-
-{
-id: 84,
-cat: 'queen',
-title: 'عربية ملكة بالورد',
-img: 'queen3.jpg',
-icon: 'fa-crown',
-desc: 'عربية مزينة بالورود الطبيعية والصناعية.'
-},
-
-{
-id: 85,
-cat: 'queen',
-title: 'عربية ملكة بالورد',
-img: 'queen4.jpg',
-icon: 'fa-crown',
-desc: 'تصميم فاخر لحفلات الملكة والزفاف.'
-},
-
-{
-id: 86,
-cat: 'queen',
-title: 'عربية ملكة أنيقة',
-img: 'queen5.jpg',
-icon: 'fa-crown',
-desc: 'تصميم فاخر لحفلات الملكة والزفاف.'
-},
-
-{
-id: 87,
-cat: 'queen',
-title: 'عربية ملكة أنيقة',
-img: 'queen6.jpg',
-icon: 'fa-crown',
-desc: 'تصميم فاخر لحفلات الملكة والزفاف.'
-},
-
-/* ===========================
-   الدعوات
+            /*
+            {
+            id: 58,
+            cat: 'tables',
+            title: 'شاشة طاولة زفاف',
+            img: 'table1.jpg',
+            icon: 'fa-display',
+            desc: 'شاشة إلكترونية أنيقة لعرض أسماء الضيوف والمناسبة.'
+            },
+            
+            {
+            id: 59,
+            cat: 'tables',
+            title: 'شاشة طاولة ملكة',
+            img: 'table2.jpg',
+            icon: 'fa-display',
+            desc: 'تصميم فاخر لطاولات حفلات الملكة.'
+            },
+            
+            {
+            id: 60,
+            cat: 'tables',
+            title: 'شاشة طاولة تخرج',
+            img: 'table3.jpg',
+            icon: 'fa-display',
+            desc: 'شاشات إلكترونية مخصصة لحفلات التخرج.'
+            },
+            
+            {
+            id: 61,
+            cat: 'tables',
+            title: 'شاشة طاولة مواليد',
+            img: 'table4.jpg',
+            icon: 'fa-display',
+            desc: 'عرض أنيق لأسماء المواليد والضيوف.'
+            },
+            
+            {
+            id: 62,
+            cat: 'tables',
+            title: 'شاشة طاولة استقبال',
+            img: 'table5.jpg',
+            icon: 'fa-display',
+            desc: 'تصميم عصري لطاولات الاستقبال والمناسبات.'
+            },
+            */
+            {
+                id: 78,
+                cat: 'tables',
+                title: 'شاشة طاولة فلورا روز',
+                img: 'table6.jpg',
+                icon: 'fa-display',
+                desc: 'تصميم حصري ومميز من فلورا روز.'
+            },
+            /* ===========================
+  ركن كوفي
 =========================== */
 
-{
-id: 88,
-cat: 'printing',
-title: 'دعوة زفاف فاخرة',
-img: 'print1.jpg',
-icon: 'fa-envelope',
-desc: 'تصميم وطباعة دعوات زفاف بأشكال راقية ومميزة.'
-},
+            {
+                id: 79,
+                cat: 'coffee',
+                title: 'ركن كوفي كلاسيكي',
+                img: 'coffee1.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'ركن كوفي أنيق بمشروبين حسب اختيار العميل.'
+            },
 
-{
-id: 89,
-cat: 'printing',
-title: 'دعوة ملكة مخصصة',
-img: 'print2.jpg',
-icon: 'fa-envelope',
-desc: 'دعوات ملكة بتصاميم عصرية حسب الطلب.'
-},
+            {
+                id: 80,
+                cat: 'coffee',
+                title: 'ركن كوفي للمناسبات',
+                img: 'coffee2.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'تجهيز ركن كوفي متكامل للحفلات والمناسبات.'
+            },
 
-{
-id: 90,
-cat: 'printing',
-title: 'دعوات تخرج',
-img: 'print3.jpg',
-icon: 'fa-envelope',
-desc: 'طباعة دعوات تخرج بتصاميم أنيقة.'
-},
+            {
+                id: 80,
+                cat: 'coffee',
+                title: 'ركن قهوة عربية',
+                img: 'coffee3.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'تقديم القهوة العربية بلمسة ضيافة راقية.'
+            },
 
-{
-id: 91,
-cat: 'printing',
-title: 'أحرف أكريليك بارزة',
-img: 'print4.jpg',
-icon: 'fa-signature',
-desc: 'تنفيذ أحرف وأسماء أكريليك بارزة للمناسبات.'
-},
+            {
+                id: 81,
+                cat: 'coffee',
+                title: 'ركن قهوة مختصة',
+                img: 'coffee4.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'قهوة مختصة ومشروبات ساخنة بجودة عالية.'
+            },
 
-{
-id: 92,
-cat: 'printing',
-title: 'لوحات أكريليك فاخرة',
-img: 'print5.jpg',
-icon: 'fa-signature',
-desc: 'تصميم لوحات أكريليك بأسماء العرسان والمناسبات.'
-},
+            {
+                id: 82,
+                cat: 'coffee',
+                title: 'ركن كوفي فاخر',
+                img: 'coffee5.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'تصميم فاخر يناسب حفلات الزواج والملكة.'
+            },
 
-{
-id: 93,
-cat: 'printing',
-title: 'دعوات فلورا روز',
-img: 'print6.jpg',
-icon: 'fa-envelope',
-desc: 'دعوات وأعمال أكريليك حصرية من فلورا روز.'
-},
+            {
+                id: 82,
+                cat: 'coffee',
+                title: 'ركن كوفي فلورا روز',
+                img: 'coffee6.jpg',
+                icon: 'fa-mug-hot',
+                desc: 'ركن كوفي متكامل بتجهيزات مميزة من فلورا روز.'
+            },
+            /* ===========================
+             عربيات ملكة
+          =========================== */
 
-/* ===========================
-   كروت طاولة
-=========================== */
+            {
+                id: 83,
+                cat: 'queen',
+                title: 'عربية ملكة كلاسيكية',
+                img: 'queen1.jpg',
+                icon: 'fa-crown',
+                desc: 'عربية ملكة أنيقة للإيجار للمناسبات الخاصة.'
+            },
 
-{
-id: 94,
-cat: 'tablecards',
-title: 'كرت طاولة فاخر',
-img: 'tablecard1.jpg',
-icon: 'fa-id-card',
-desc: 'تصميم كروت طاولات للمناسبات.'
-},
+            {
+                id: 84,
+                cat: 'queen',
+                title: 'عربية ملكة فاخرة',
+                img: 'queen2.jpg',
+                icon: 'fa-crown',
+                desc: 'تصميم فاخر يضيف لمسة مميزة على الحفل.'
+            },
 
-{
-id: 95,
-cat: 'tablecards',
-title: 'كرت طاولة أنيق',
-img: 'tablecard2.jpg',
-icon: 'fa-id-card',
-desc: 'تصميم راقٍ لطاولات الحفلات.'
-},
+            {
+                id: 85,
+                cat: 'queen',
+                title: 'عربية ملكة بالورد',
+                img: 'queen3.jpg',
+                icon: 'fa-crown',
+                desc: 'عربية مزينة بالورود الطبيعية والصناعية.'
+            },
 
-{
-id: 96,
-cat: 'tablecards',
-title: 'كرت طاولة مميز',
-img: 'tablecard3.jpg',
-icon: 'fa-id-card',
-desc: 'تنفيذ احترافي حسب الطلب.'
-},
+            {
+                id: 86,
+                cat: 'queen',
+                title: 'عربية ملكة بالورد',
+                img: 'queen4.jpg',
+                icon: 'fa-crown',
+                desc: 'تصميم  فاخر لحفلات الملكة والزفاف.'
+            },
 
-/* ===========================
-   تصميم وقص أكريليك
-=========================== */
-
-{
-id: 97,
-cat: 'acrylic',
-title: 'قص أكريليك احترافي',
-img: 'acrylic1.jpg',
-icon: 'fa-scissors',
-desc: 'قص وتنفيذ أكريليك حسب الطلب.'
-},
-
-{
-id: 98,
-cat: 'acrylic',
-title: 'لوحة أكريليك فاخرة',
-img: 'acrylic2.jpg',
-icon: 'fa-scissors',
-desc: 'تصميم وتنفيذ لوحات أكريليك.'
-},
-
-{
-id: 99,
-cat: 'acrylic',
-title: 'أسماء أكريليك بارزة',
-img: 'acrylic3.jpg',
-icon: 'fa-scissors',
-desc: 'تنفيذ أسماء وشعارات أكريليك.'
-},
-
-{
-id: 100,
-cat: 'acrylic',
-title: 'شعار أكريليك',
-img: 'acrylic4.jpg',
-icon: 'fa-scissors',
-desc: 'قص الشعارات باحترافية.'
-},
-
-{
-id: 101,
-cat: 'acrylic',
-title: 'لوحة مناسبات أكريليك',
-img: 'acrylic5.jpg',
-icon: 'fa-scissors',
-desc: 'لوحات للمناسبات والأفراح.'
-},
-
-{
-id: 102,
-cat: 'acrylic',
-title: 'تصميم أكريليك خاص',
-img: 'acrylic6.jpg',
-icon: 'fa-scissors',
-desc: 'تصميم وتنفيذ حسب الطلب.'
-}
-];
+            {
+                id: 87,
+                cat: 'queen',
+                title: 'عربية ملكة انيقة',
+                img: 'queen5.jpg',
+                icon: 'fa-crown',
+                desc: 'تصميم فاخر لحفلات الملكة والزفاف.'
+            },
 
 
-function filter(cat) {
+            /* ===========================
+            الدعوات والأكريليك
+         =========================== */
 
-    const grid = document.getElementById('services-grid');
+            {
+                id: 89,
+                cat: 'printing',
+                title: 'دعوة زفاف فاخرة',
+                img: 'print1.jpg',
+                icon: 'fa-envelope',
+                desc: 'تصميم وطباعة دعوات زفاف بأشكال راقية ومميزة.'
+            },
 
-    if (!grid) return;
+            {
+                id: 90,
+                cat: 'printing',
+                title: 'دعوة ملكة مخصصة',
+                img: 'print2.jpg',
+                icon: 'fa-envelope',
+                desc: 'دعوات ملكة بتصاميم عصرية حسب الطلب.'
+            },
 
-    grid.innerHTML = '';
+            {
+                id: 91,
+                cat: 'printing',
+                title: 'دعوات تخرج',
+                img: 'print3.jpg',
+                icon: 'fa-envelope',
+                desc: 'طباعة دعوات تخرج بتصاميم أنيقة.'
+            },
 
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+            {
+                id: 92,
+                cat: 'printing',
+                title: 'أحرف أكريليك بارزة',
+                img: 'print4.jpg',
+                icon: 'fa-signature',
+                desc: 'تنفيذ أحرف وأسماء أكريليك بارزة للمناسبات.'
+            },
 
-        btn.classList.remove(
-            'bg-orange-600',
-            'text-white'
-        );
+            {
+                id: 93,
+                cat: 'printing',
+                title: 'لوحات أكريليك فاخرة',
+                img: 'print5.jpg',
+                icon: 'fa-signature',
+                desc: 'تصميم لوحات أكريليك بأسماء العرسان والمناسبات.'
+            },
 
-        btn.classList.add(
-            'bg-white',
-            'text-gray-600'
-        );
+            {
+                id: 94,
+                cat: 'printing',
+                title: 'دعوات فلورا روز',
+                img: 'print6.jpg',
+                icon: 'fa-envelope',
+                desc: 'دعوات وأعمال أكريليك حصرية من فلورا روز.'
+            }
 
-    });
+        ];
 
-    const activeBtn = document.querySelector(
-        `.filter-btn[onclick="filter('${cat}')"]`
-    );
 
-    if (activeBtn) {
+        function filter(cat) {
+            const grid = document.getElementById('services-grid');
+            grid.innerHTML = '';
 
-        activeBtn.classList.remove(
-            'bg-white',
-            'text-gray-600'
-        );
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-orange-600', 'text-white');
+                b.classList.add('bg-white', 'text-gray-600');
+            });
 
-        activeBtn.classList.add(
-            'bg-orange-600',
-            'text-white'
-        );
+            event.target.classList.add('bg-orange-600', 'text-white');
 
-    }
+            const items = cat === 'all'
+                ? services
+                : services.filter(s => s.cat === cat);
+            items.forEach(s => {
+                grid.innerHTML += `
+    <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
 
-    const items =
-        cat === 'all'
-        ? services
-        : services.filter(item => item.cat === cat);
+        <div class="overflow-hidden bg-orange-50 h-56 relative">
 
-    items.forEach(s => {
-
-        grid.innerHTML += `
-        <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
-
-            <div class="bg-orange-50 h-56 overflow-hidden">
-
-                <img
-                    src="${s.img}"
-                    alt="${s.title}"
-                    class="w-full h-full object-cover"
-                    onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
-
-            </div>
-
-            ${isAdmin ? `
-            <div class="p-3">
-                <button
-                    onclick="deleteProduct(${s.id})"
-                    class="bg-red-600 text-white px-3 py-2 rounded-lg w-full">
-                    حذف المنتج
-                </button>
-            </div>
-            ` : ''}
-
-            <div class="p-5 text-center">
-
-                <h3 class="font-black text-lg mb-2">
-                    ${s.title}
-                </h3>
-
-                <p class="text-gray-500 text-sm">
-                    ${s.desc}
-                </p>
-
-            </div>
+            <img
+                src="${s.img}"
+                alt="${s.title}"
+                class="w-full h-full object-contain"
+                onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
 
         </div>
-        `;
 
-    });
+        ${isAdmin ? `
+        <button
+            onclick="deleteProduct(${s.id})"
+            class="bg-red-600 text-white px-3 py-2 rounded-lg mt-2 mx-2">
+            حذف
+        </button>
+        ` : ''}
 
-}
+        <div class="p-5 text-center">
+
+            <h3 class="font-black text-xl mb-2">
+                ${s.title}
+            </h3>
+
+            <p>
+                ${s.desc}
+            </p>
+
+        </div>
+
+    </div>
+    `;
+            });
+        }
         function selectService(title) {
             document.getElementById('cust-service').value = title;
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
@@ -1609,183 +1668,170 @@ function filter(cat) {
         }
         async function saveOrder(productName, productImage) {
 
-    const customerName = prompt("اكتب اسمك");
+            const customerName = prompt("اكتب اسمك");
 
-    if (!customerName) return;
+            if (!customerName) return;
 
-    const imageUrl =
-    window.location.origin + "/" + productImage;
+            const imageUrl =
+                window.location.origin + "/" + productImage;
 
-    window.open(
-        `https://wa.me/966536790268?text=${encodeURIComponent(
-            "الاسم: " + customerName +
-            "\n\nالمنتج: " + productName +
-            "\n\nرابط الصورة:\n" + imageUrl
-        )}`,
-        "_blank"
-    );
-}
-   
-function addProduct() {
+            window.open(
+                `https://wa.me/966536790268?text=${encodeURIComponent(
+                    "الاسم: " + customerName +
+                    "\n\nالمنتج: " + productName +
+                    "\n\nرابط الصورة:\n" + imageUrl
+                )}`,
+                "_blank"
+            );
+        }
+        function addProduct() {
 
-    console.log("addProduct works");
+            const file =
+                document.getElementById("newImage").files[0];
 
-    const file =
-    document.getElementById("newImage").files[0];
-
-    if (!file) {
-        alert("اختر صورة");
-        return;
-    }
-
-    const reader = new FileReader();
-
-    reader.onload = function(e) {
-
-    const product = {
-
-        id: Date.now(),
-
-        cat: document.getElementById("newCat").value,
-
-        title: document.getElementById("newTitle").value,
-
-        desc: document.getElementById("newDesc").value,
-
-        img: e.target.result,
-
-        icon: "fa-image"
-
-    };
-
-    services.push(product);
-
-    localStorage.setItem(
-        "floraProducts",
-        JSON.stringify(services)
-    );
-
-    filter('all');
-
-    alert("تمت إضافة المنتج");
-
-};
-
-reader.readAsDataURL(file);
-
-}
-        function openAdmin(){
-
-    const email = prompt("أدخل البريد الإلكتروني");
-
-    if(email === "walmaher0@gmail.com"){
-
-        isAdmin = true;
-
-        document.getElementById("admin").style.display = "block";
-
-        filter('all');
-
-        alert("تم فتح لوحة الإدارة");
-
-    }else{
-
-        alert("غير مصرح بالدخول");
-
-    }
-
-}
-function deleteProduct(id){
-
-    if(!confirm("هل تريد حذف المنتج؟")){
-        return;
-    }
-
-    const index = services.findIndex(
-        item => item.id === id
-    );
-
-    if(index !== -1){
-
-        services.splice(index, 1);
-
-        localStorage.setItem(
-            "floraProducts",
-            JSON.stringify(services)
-        );
-
-        filter('all');
-
-        alert("تم حذف المنتج");
-
-    }
-
-}window.onload = function () {
-
-    const savedProducts =
-        JSON.parse(localStorage.getItem("floraProducts"));
-
-    if (savedProducts) {
-
-        services.length = 0;
-
-        savedProducts.forEach(item => {
-            services.push(item);
-        });
-
-    }
-
-    filter('all');
-
-};
-
-    const chartCanvas =
-    document.getElementById('satisfactionChart');
-
-    if(chartCanvas){
-
-        const ctx = chartCanvas.getContext('2d');
-
-        new Chart(ctx,{
-            type:'doughnut',
-            data:{
-                labels:[
-                    'راضون جداً (5 نجوم)',
-                    'راضون (4 نجوم)',
-                    'أخرى'
-                ],
-                datasets:[{
-                    data:[79,4,1],
-                    backgroundColor:[
-                        '#e08726',
-                        '#fbbf24',
-                        '#ffedd5'
-                    ],
-                    borderWidth:0,
-                    hoverOffset:10
-                }]
-            },
-            options:{
-                responsive:true,
-                maintainAspectRatio:false,
-                plugins:{
-                    legend:{
-                        position:'bottom'
-                    }
-                },
-                cutout:'80%'
+            if (!file) {
+                alert("اختر صورة");
+                return;
             }
-        });
 
-    }
+            const reader = new FileReader();
 
-};
+            reader.onload = function (e) {
+
+                const product = {
+
+                    id: Date.now(),
+
+                    cat: document.getElementById("newCat").value,
+
+                    title: document.getElementById("newTitle").value,
+
+                    desc: document.getElementById("newDesc").value,
+
+                    img: e.target.result,
+
+                    icon: "fa-image"
+
+                };
+
+                services.push(product);
+
+                localStorage.setItem(
+                    "floraProducts",
+                    JSON.stringify(services)
+                );
+
+                filter('all');
+
+                alert("تمت إضافة المنتج");
+
+            };
+
+            reader.readAsDataURL(file);
+        }
+        function openAdmin() {
+
+            const email = prompt("أدخل البريد الإلكتروني");
+
+            if (email === "walmaher0@gmail.com") {
+
+                document.getElementById("admin").style.display = "block";
+
+            } else {
+
+                alert("غير مصرح بالدخول");
+
+            }
+
+        }
+        function deleteProduct(id) {
+
+            if (!confirm("هل تريد حذف المنتج؟")) {
+                return;
+            }
+
+            const index = services.findIndex(
+                item => item.id === id
+            );
+
+            if (index !== -1) {
+
+                services.splice(index, 1);
+
+                localStorage.setItem(
+                    "floraProducts",
+                    JSON.stringify(services)
+                );
+
+                filter('all');
+
+                alert("تم حذف المنتج");
+
+            }
+
+        }
+        window.onload = () => {
+
+            const savedProducts =
+                JSON.parse(localStorage.getItem("floraProducts"));
+
+            if (savedProducts) {
+
+                services.length = 0;
+
+                savedProducts.forEach(item => {
+                    services.push(item);
+                });
+
+            }
+
+            filter('all');
+
+            const chartCanvas =
+                document.getElementById('satisfactionChart');
+
+            if (chartCanvas) {
+
+                const ctx = chartCanvas.getContext('2d');
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [
+                            'راضون جداً (5 نجوم)',
+                            'راضون (4 نجوم)',
+                            'أخرى'
+                        ],
+                        datasets: [{
+                            data: [79, 4, 1],
+                            backgroundColor: [
+                                '#e08726',
+                                '#fbbf24',
+                                '#ffedd5'
+                            ],
+                            borderWidth: 0,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        },
+                        cutout: '80%'
+                    }
+                });
+
+            }
+
+        };
     </script>
-<button
-id="adminBtn"
-onclick="openAdmin()"
-style="display:none;">
-⚙ الإدارة
-</button>
+    <button id="adminBtn" onclick="openAdmin()" style="display:none;">
+        ⚙ الإدارة
+    </button>
 </body>
+
 </html>
