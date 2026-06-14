@@ -340,62 +340,122 @@ function openAdmin(){
         </section>
 
      
-        <!-- Booking Form -->
-        <section id="booking" class="mb-10">
-            <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-orange-800/30 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h3 class="text-4xl font-black mb-6">هل أنت جاهز <br> لطلب التنسيق؟</h3>
-                        <p class="text-orange-200/80 mb-10 text-lg leading-relaxed">أخبرنا بنوع مناسبتك، وسيعمل فريق فلورا روز على تنفيذ أجمل تنسيق للورود والهدايا والحفلات بلمسات إبداعية راقية تليق بكم..</p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex gap-4 items-center">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <p class="text-sm font-bold text-orange-100">شارع عبدالله بن أبي أمية، الحمدانية، جدة 23762</p>
-                            </div>
-                            <div class="flex gap-4 items-center">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <p class="text-xl font-black text-white" dir="ltr">+966 53 679 0268</p>
-                            </div>
+      <!-- Booking Form -->
+<section id="booking" class="mb-10">
+
+    <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
+
+        <div class="absolute top-0 right-0 w-96 h-96 bg-orange-800/30 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+
+                <h3 class="text-4xl font-black mb-6">
+                    هل أنت جاهز <br> لطلب التنسيق؟
+                </h3>
+
+                <p class="text-orange-200/80 mb-10 text-lg leading-relaxed">
+                    أخبرنا بنوع مناسبتك، وسيعمل فريق فلورا روز على تنفيذ أجمل تنسيق
+                    للورود والهدايا والحفلات بلمسات إبداعية راقية تليق بكم.
+                </p>
+
+                <div class="space-y-6">
+
+                    <div class="flex gap-4 items-center">
+
+                        <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
+
+                        <p class="text-sm font-bold text-orange-100">
+                            شارع عبدالله بن أبي أمية، الحمدانية، جدة 23762
+                        </p>
+
                     </div>
-                    
-                    <div class="bg-white p-8 md:p-12 rounded-[3rem] text-gray-900 shadow-inner">
-                        <form onsubmit="submitToWA(event)" class="space-y-6">
-                            <div>
-                                <label class="block text-xs font-black text-gray-400 uppercase mb-2">اسمك الكريم</label>
-                                <input type="text" id="cust-name" required placeholder="مثال: أحمد" class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-black text-gray-400 uppercase mb-2">الخدمة المطلوبة</label>
-                                <select id="cust-service" class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
-                                    <option>تنسيق ورد طبيعي</option>
-                                    <option>تنسيق ورد صناعي</option>
-                                    <option>تشريع سيارات عرسان</option>
-                                    <option>كوش أفراح وحفلات</option>
-                                    <option>تنسيق حفلات وملكة-تنسيق حفلات تخرج-تزين حفلات مواليد </option>
-                    
-                                     <option>شاشات ترحيبيه-شاشات طاولات الكترونيه </option>
-                                     <option>عربيات ملكه للايجار والبيع  </option>
-                                     <option>كروت طاولة</option>
-                                     <option>تصميم وقص أكريلك</option>
-                                     <option>ركن كوفي حسب الاختيار </option>
-                                </select>
-                            </div>
-                            <button type="submit" class="w-full btn-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-orange-100 hover:scale-[1.02] transition-transform flex justify-center items-center gap-3">
-                                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                                إرسال الطلب للواتساب
-                            </button>
-                        </form>
+
+                    <div class="flex gap-4 items-center">
+
+                        <div class="w-12 h-12 rounded-2xl bg-orange-900 flex items-center justify-center text-orange-400">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <p class="text-xl font-black text-white" dir="ltr">
+                            +966 53 679 0268
+                        </p>
+
                     </div>
+
                 </div>
+
             </div>
-        </section>
+
+            <div class="bg-white p-8 md:p-12 rounded-[3rem] text-gray-900 shadow-inner">
+
+                <form onsubmit="submitToWA(event)" class="space-y-6">
+
+                    <div>
+
+                        <label class="block text-xs font-black text-gray-400 uppercase mb-2">
+                            اسمك الكريم
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cust-name"
+                            required
+                            placeholder="مثال: أحمد"
+                            class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
+
+                    </div>
+
+                    <div>
+
+                        <label class="block text-xs font-black text-gray-400 uppercase mb-2">
+                            الخدمة المطلوبة
+                        </label>
+
+                        <select
+                            id="cust-service"
+                            class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
+
+                            <option>تنسيق ورد طبيعي</option>
+                            <option>تنسيق ورد صناعي</option>
+                            <option>تشريع سيارات عرسان</option>
+                            <option>تنسيق حفلات زواج وملكة</option>
+                            <option>تنسيق حفلات تخرج</option>
+                            <option>تنسيق حفلات مواليد</option>
+                            <option>شاشات ترحيبية</option>
+                            <option>شاشات طاولات إلكترونية</option>
+                            <option>ركن كوفي</option>
+                            <option>عربيات ملكة</option>
+                            <option>دعوات ومطبوعات</option>
+                            <option>كروت طاولة</option>
+                            <option>تصميم وقص أكريليك</option>
+
+                        </select>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full btn-gradient text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-orange-100 hover:scale-[1.02] transition-transform flex justify-center items-center gap-3">
+
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+
+                        إرسال الطلب للواتساب
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
      
          <!-- لوحة إضافة المنتجات -->
 
@@ -736,56 +796,7 @@ title: 'فازة ورد صناعيه راقيه ',
 img: 'artificial13.jpg',
 icon: 'fa-seedling',
 desc: 'تصميم فاخر من فلورا روز.'
-},     /*
-{
-id: 30,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial14.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-},  
-            
-{
-id: 31,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial15.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
 },    
-{
-id: 32,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial16.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-},    
-{
-id: 33,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial17.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-},    
-{
-id: 34,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial18.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-},    
-{
-id: 35,
-cat: 'artificial',
-title: 'باقة فلورا الصناعية',
-img: 'artificial19.jpg',
-icon: 'fa-seedling',
-desc: 'تصميم فاخر من فلورا روز.'
-},    */
 /* ===========================
    تشريع سيارات العرسان
 =========================== */
