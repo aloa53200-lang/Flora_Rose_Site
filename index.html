@@ -38,32 +38,144 @@ body{
 }
 
 </style>
-
 <script>
 
-let isAdmin = false;
+        let isAdmin = false;
 
-function openAdmin(){
+        const firebaseConfig = {
+            apiKey: "ضع apiKey هنا",
+            authDomain: "ضع authDomain هنا",
+            projectId: "ضع projectId هنا",
+            storageBucket: "ضع storageBucket هنا",
+            messagingSenderId: "ضع messagingSenderId هنا",
+            appId: "ضع appId هنا"
+        };
 
-    const email = prompt("أدخل البريد الإلكتروني");
+        firebase.initializeApp(firebaseConfig);
 
-    if(email === "mohammedflorarose@gmail.com"){
+        const db = firebase.firestore();
+        const auth = firebase.auth();
 
-        isAdmin = true;
+        let clickCount = 0;
 
-        document.getElementById("admin").style.display = "block";
+        function secretAdmin() {
 
-        alert("تم فتح لوحة الإدارة");
+            clickCount++;
 
-    }else{
+            if (clickCount >= 5) {
 
-        alert("غير مصرح بالدخول");
+                clickCount = 0;
 
-    }
+                openAdmin();
 
-}
+            }
 
-</script>
+        }
+
+        function deleteProduct(id) {
+
+            if (!confirm("هل تريد حذف المنتج؟")) {
+                return;
+            }
+
+            const index =
+                services.findIndex(item => item.id === id);
+
+            if (index !== -1) {
+
+                services.splice(index, 1);
+
+                localStorage.setItem(
+                    "floraProducts",
+                    JSON.stringify(services)
+                );
+
+                filter('all');
+
+                alert("تم حذف المنتج");
+
+            }
+
+        }
+
+        function openAdmin() {
+
+            const email = prompt("أدخل البريد الإلكتروني");
+
+            if (email === "walmaher0@gmail.com") {
+
+                isAdmin = true;
+
+                document.getElementById("admin").style.display = "block";
+
+                filter('all');
+
+            } else {
+
+                alert("غير مصرح بالدخول");
+
+            }
+
+        }
+
+        window.onload = () => {
+
+            // كود التحميل
+
+        };
+
+        function openAdmin() {
+
+            const email = prompt("أدخل البريد الإلكتروني");
+
+            if (email === "mohammedflorarose@gmail.com") {
+
+                isAdmin = true;
+
+                console.log("Admin Login Success");
+                console.log(isAdmin);
+
+                document.getElementById("admin").style.display = "block";
+
+                filter('all');
+
+                alert("تم فتح لوحة الإدارة");
+
+            } else {
+
+                alert("غير مصرح بالدخول");
+
+            }
+
+        }
+
+        function openAdmin() {
+
+            const email = prompt("أدخل البريد الإلكتروني");
+
+            if (email === "walmaher0@gmail.com") {
+
+                isAdmin = true;
+
+                document.getElementById("admin").style.display = "block";
+
+                filter('all');
+
+            } else {
+
+                alert("غير مصرح بالدخول");
+
+            }
+
+        }
+
+        window.onload = () => {
+
+            // كود التحميل
+
+        };
+
+    </script>
 
 </head>
      
