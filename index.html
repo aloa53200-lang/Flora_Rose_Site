@@ -410,10 +410,13 @@
                     👑 عربيات ملكة
                 </button>
 
-                <button onclick="filter('printing')"
-                    class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-                    🖨️ دعوات وأكريليك
-                </button>
+                <button onclick="filter('tablecards')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+               🪪 كروت طاولة
+               </button>
+
+               <button onclick="filter('acrylic')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+               ✂️ تصميم وقص أكريليك
+               </button>
 
             </div>
 
@@ -561,16 +564,20 @@
                                     المطلوبة</label>
                                 <select id="cust-service"
                                     class="w-full bg-gray-50 border-0 rounded-2xl p-4 focus:ring-2 focus:ring-orange-500 font-bold">
-                                    <option>تنسيق ورد طبيعي</option>
-                                    <option>تنسيق ورد صناعي</option>
-                                    <option>تشريع سيارات عرسان</option>
-                                    <option>كوش أفراح وحفلات</option>
-                                    <option>تنسيق حفلات وملكة-تنسيق حفلات تخرج-تزين حفلات مواليد </option>
-
-                                    <option>شاشات ترحيبيه-شاشات طاولات الكترونيه </option>
-                                    <option>عربيات ملكه للايجار والبيع </option>
-                                    <option>طباعه دعوات و احرف اكريلك </option>
-                                    <option>ركن كوفي حسب الاختيار </option>
+                                
+                                 <option>تنسيق ورد صناعي</option>
+                                 <option>تشريع سيارات عرسان</option>
+                                 <option>كوش أفراح وحفلات</option>
+                                 <option>تنسيق حفلات وملكة</option>
+                                 <option>حفلات تخرج</option>
+                                 <option>حفلات مواليد</option>
+                                 <option>شاشات ترحيبية</option>
+                                 <option>شاشات طاولات إلكترونية</option>
+                                 <option>عربيات ملكة</option>
+                                 <option>ركن كوفي</option>
+                                 <option>دعوات</option>
+                                 <option>كروت طاولة</option>
+                                 <option>تصميم وقص أكريليك</option>
                                 </select>
                             </div>
                             <button type="submit"
@@ -602,17 +609,34 @@
 
                 <select id="newCat" class="border p-3 rounded-xl">
 
-                    <option value="nature">ورد طبيعي</option>
-                    <option value="artificial">ورد صناعي</option>
-                    <option value="cars">سيارات عرسان</option>
-                    <option value="baby">مواليد</option>
-                    <option value="wedding">زواج</option>
-                    <option value="graduation">تخرج</option>
-                    <option value="welcome">شاشات ترحيبية</option>
-                    <option value="tables">شاشات طاولات</option>
-                    <option value="coffee">ركن كوفي</option>
-                    <option value="queen">عربيات ملكة</option>
-                    <option value="printing">دعوات وأكريليك</option>
+                  
+                    <option value="nature">🌹 ورد طبيعي</option>
+                    
+                    <option value="artificial">🌸 ورد صناعي</option>
+                    
+                    <option value="cars">🚗 سيارات عرسان</option>
+                    
+                    <option value="baby">👶 مواليد</option>
+                    
+                    <option value="wedding">💍 زواج وملكة</option>
+                    
+                    <option value="graduation">🎓 تخرج</option>
+                    
+                    <option value="welcome">📺 شاشات ترحيبية</option>
+                    
+                    <option value="tables">🖥️ شاشات طاولات</option>
+                    
+                    <option value="coffee">☕ ركن كوفي</option>
+                    
+                    <option value="queen">👑 عربيات ملكة</option>
+                    
+                    <option value="printing">🖨️ دعوات وأكريليك</option>
+                    
+                    <option value="tablecards">🪪 كروت طاولة</option>
+                    
+                    <option value="acrylic"> تصميم وقص أكريليك</option>
+                    
+                    </select>
 
                 </select>
 
@@ -1434,12 +1458,28 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
                 icon: 'fa-display',
                 desc: 'تصميم حصري ومميز من فلورا روز.'
             },
+                 {
+                id: 79,
+                cat: 'tables',
+                title: 'شاشة طاولة فلورا روز',
+                img: 'table7.jpg',
+                icon: 'fa-display',
+                desc: 'تصميم حصري ومميز من فلورا روز.'
+            },
+                 {
+                id: 80,
+                cat: 'tables',
+                title: 'شاشة طاولة فلورا روز',
+                img: 'table8.jpg',
+                icon: 'fa-display',
+                desc: 'تصميم حصري ومميز من فلورا روز.'
+            },
             /* ===========================
   ركن كوفي
 =========================== */
 
             {
-                id: 79,
+                id: 81,
                 cat: 'coffee',
                 title: 'ركن كوفي كلاسيكي',
                 img: 'coffee1.jpg',
@@ -1448,7 +1488,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 80,
+                id: 82,
                 cat: 'coffee',
                 title: 'ركن كوفي للمناسبات',
                 img: 'coffee2.jpg',
@@ -1457,7 +1497,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 80,
+                id: 83,
                 cat: 'coffee',
                 title: 'ركن قهوة عربية',
                 img: 'coffee3.jpg',
@@ -1466,7 +1506,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 81,
+                id: 84,
                 cat: 'coffee',
                 title: 'ركن قهوة مختصة',
                 img: 'coffee4.jpg',
@@ -1475,7 +1515,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 82,
+                id: 85,
                 cat: 'coffee',
                 title: 'ركن كوفي فاخر',
                 img: 'coffee5.jpg',
@@ -1484,7 +1524,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 82,
+                id: 86,
                 cat: 'coffee',
                 title: 'ركن كوفي فلورا روز',
                 img: 'coffee6.jpg',
@@ -1496,7 +1536,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
           =========================== */
 
             {
-                id: 83,
+                id: 87,
                 cat: 'queen',
                 title: 'عربية ملكة كلاسيكية',
                 img: 'queen1.jpg',
@@ -1505,7 +1545,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 84,
+                id: 88,
                 cat: 'queen',
                 title: 'عربية ملكة فاخرة',
                 img: 'queen2.jpg',
@@ -1514,7 +1554,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 85,
+                id: 89,
                 cat: 'queen',
                 title: 'عربية ملكة بالورد',
                 img: 'queen3.jpg',
@@ -1523,7 +1563,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 86,
+                id: 90,
                 cat: 'queen',
                 title: 'عربية ملكة بالورد',
                 img: 'queen4.jpg',
@@ -1532,7 +1572,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 87,
+                id: 91,
                 cat: 'queen',
                 title: 'عربية ملكة انيقة',
                 img: 'queen5.jpg',
@@ -1546,7 +1586,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
          =========================== */
 
             {
-                id: 89,
+                id: 92,
                 cat: 'printing',
                 title: 'دعوة زفاف فاخرة',
                 img: 'print1.jpg',
@@ -1555,7 +1595,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 90,
+                id: 93,
                 cat: 'printing',
                 title: 'دعوة ملكة مخصصة',
                 img: 'print2.jpg',
@@ -1564,7 +1604,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 91,
+                id: 94,
                 cat: 'printing',
                 title: 'دعوات تخرج',
                 img: 'print3.jpg',
@@ -1573,7 +1613,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 92,
+                id: 95,
                 cat: 'printing',
                 title: 'أحرف أكريليك بارزة',
                 img: 'print4.jpg',
@@ -1582,7 +1622,7 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 93,
+                id: 96,
                 cat: 'printing',
                 title: 'لوحات أكريليك فاخرة',
                 img: 'print5.jpg',
@@ -1591,15 +1631,102 @@ desc: 'تنسيق متكامل لحفلات الزواج والملكة.'
             },
 
             {
-                id: 94,
+                id: 97,
                 cat: 'printing',
                 title: 'دعوات فلورا روز',
                 img: 'print6.jpg',
                 icon: 'fa-envelope',
                 desc: 'دعوات وأعمال أكريليك حصرية من فلورا روز.'
             }
-
-        ];
+          /* ===========================
+   كروت طاولة
+=========================== */
+               
+               {
+               id: 95,
+               cat: 'tablecards',
+               title: 'كرت طاولة فاخر',
+               img: 'tablecard1.jpg',
+               icon: 'fa-id-card',
+               desc: 'تصميم كروت طاولات للمناسبات.'
+               },
+               
+               {
+               id: 96,
+               cat: 'tablecards',
+               title: 'كرت طاولة أنيق',
+               img: 'tablecard2.jpg',
+               icon: 'fa-id-card',
+               desc: 'تصميم راقٍ لطاولات الحفلات.'
+               },
+               
+               {
+               id: 97,
+               cat: 'tablecards',
+               title: 'كرت طاولة مميز',
+               img: 'tablecard3.jpg',
+               icon: 'fa-id-card',
+               desc: 'تنفيذ احترافي حسب الطلب.'
+               },
+               
+               /* ===========================
+                  تصميم وقص أكريليك
+               =========================== */
+               
+               {
+               id: 98,
+               cat: 'acrylic',
+               title: 'قص أكريليك احترافي',
+               img: 'acrylic1.jpg',
+               icon: 'fa-scissors',
+               desc: 'قص وتنفيذ أكريليك حسب الطلب.'
+               },
+               
+               {
+               id: 99,
+               cat: 'acrylic',
+               title: 'لوحة أكريليك فاخرة',
+               img: 'acrylic2.jpg',
+               icon: 'fa-scissors',
+               desc: 'تصميم وتنفيذ لوحات أكريليك.'
+               },
+               
+               {
+               id: 100,
+               cat: 'acrylic',
+               title: 'أسماء أكريليك بارزة',
+               img: 'acrylic3.jpg',
+               icon: 'fa-scissors',
+               desc: 'تنفيذ أسماء وشعارات أكريليك.'
+               },
+               
+               {
+               id: 101,
+               cat: 'acrylic',
+               title: 'شعار أكريليك',
+               img: 'acrylic4.jpg',
+               icon: 'fa-scissors',
+               desc: 'قص الشعارات باحترافية.'
+               },
+               
+               {
+               id: 102,
+               cat: 'acrylic',
+               title: 'لوحة مناسبات أكريليك',
+               img: 'acrylic5.jpg',
+               icon: 'fa-scissors',
+               desc: 'لوحات للمناسبات والأفراح.'
+               },
+               
+               {
+               id: 103,
+               cat: 'acrylic',
+               title: 'تصميم أكريليك خاص',
+               img: 'acrylic6.jpg',
+               icon: 'fa-scissors',
+               desc: 'تصميم وتنفيذ حسب الطلب.'
+               },
+                       ];
 
 
         function filter(cat) {
