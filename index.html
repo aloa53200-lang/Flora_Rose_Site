@@ -20,21 +20,6 @@
 
 <title>فلورا روز | أرقى تنسيق ورد وهدايا بالحمدانية</title>
 
-<meta name="description" content="فلورا روز لتنسيق الورد الطبيعي والصناعي، حفلات التخرج، سيارات العرسان، ركن كوفي، شاشات ترحيبية، وطباعة الدعوات في الحمدانية.">
-
-<meta name="keywords" content="فلورا روز, ورد طبيعي, ورد صناعي, تنسيق حفلات, الحمدانية, تخرج, سيارات عرسان, ركن كوفي">
-
-<meta name="robots" content="index,follow">
-
-<meta name="author" content="فلورا روز">
-
-<meta property="og:title" content="فلورا روز | تنسيق ورد ومناسبات">
-<meta property="og:description" content="أرقى تنسيق ورد وهدايا ومناسبات بالحمدانية">
-<meta property="og:type" content="website">
-
-<!-- ضع رابط صورة الشعار -->
-<meta property="og:image" content="logo.png.jpeg">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -46,6 +31,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
+
 body{
     font-family:'Tajawal',sans-serif;
     background-color:#fffcf7;
@@ -85,151 +71,8 @@ body{
 .service-card:hover .service-img{
     transform:scale(1.08);
 }
+
 </style>
-
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-
-<script>
-
-let isAdmin = false;
-
-const firebaseConfig = {
-  apiKey: "ضع apiKey هنا",
-  authDomain: "ضع authDomain هنا",
-  projectId: "ضع projectId هنا",
-  storageBucket: "ضع storageBucket هنا",
-  messagingSenderId: "ضع messagingSenderId هنا",
-  appId: "ضع appId هنا"
-};
-
-firebase.initializeApp(firebaseConfig);
-
-const db = firebase.firestore();
-const auth = firebase.auth();
-
-let clickCount = 0;
-
-function secretAdmin(){
-
-    clickCount++;
-
-    if(clickCount >= 5){
-
-        clickCount = 0;
-
-        openAdmin();
-
-    }
-
-}
-
-function deleteProduct(id){
-
-    if(!confirm("هل تريد حذف المنتج؟")){
-        return;
-    }
-
-    const index =
-    services.findIndex(item => item.id === id);
-
-    if(index !== -1){
-
-        services.splice(index,1);
-
-        localStorage.setItem(
-            "floraProducts",
-            JSON.stringify(services)
-        );
-
-        filter('all');
-
-        alert("تم حذف المنتج");
-
-    }
-
-}
-
-function openAdmin(){
-
-    const email = prompt("أدخل البريد الإلكتروني");
-
-    if(email === "mohammedflorarose@gmail.com"){
-
-        isAdmin = true;
-
-        document.getElementById("admin").style.display = "block";
-
-        filter('all');
-
-    }else{
-
-        alert("غير مصرح بالدخول");
-
-    }
-
-}
-
-window.onload = () => {
-
-    // كود التحميل
-
-};
-
-function openAdmin(){
-
-    const email = prompt("أدخل البريد الإلكتروني");
-
-    if(email === "walmaher0@gmail.com"){
-
-        isAdmin = true;
-
-        console.log("Admin Login Success");
-        console.log(isAdmin);
-
-        document.getElementById("admin").style.display = "block";
-
-        filter('all');
-
-        alert("تم فتح لوحة الإدارة");
-
-    }else{
-
-        alert("غير مصرح بالدخول");
-
-    }
-
-}
-
-function openAdmin(){
-
-    const email = prompt("أدخل البريد الإلكتروني");
-
-    if(email === "walmaher0@gmail.com"){
-
-        isAdmin = true;
-
-        document.getElementById("admin").style.display = "block";
-
-        filter('all');
-
-    }else{
-
-        alert("غير مصرح بالدخول");
-
-    }
-
-}
-
-window.onload = () => {
-
-    // كود التحميل
-
-};
-
-</script>
 
 </head>
      
@@ -325,6 +168,80 @@ window.onload = () => {
         لنصنع لكم أجمل الذكريات في كل مناسبة 🌹
     </span>
 </p>
+                    <!-- Interactive Service Catalog -->
+       <section id="catalog" class="mb-24">
+
+    <div class="text-center mb-8">
+        <h3 class="text-3xl font-black text-gray-900">
+            دليل الخدمات والإبداع
+        </h3>
+
+        <p class="text-gray-500 mt-2">
+            اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
+        </p>
+    </div>
+
+   <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
+
+    <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
+        الكل
+    </button>
+
+    <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        🌹 ورد طبيعي
+    </button>
+
+    <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        🌸 ورد صناعي
+    </button>
+
+    <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        🚗 سيارات عرسان
+    </button>
+
+    <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        👶 مواليد
+    </button>
+
+    <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        💍 زواج وملكة
+    </button>
+
+    <button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        🎓 تخرج
+    </button>
+
+    <button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        📺 شاشات ترحيبية
+    </button>
+
+    <button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        🖥️ شاشات طاولات
+    </button>
+
+    <button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+        ☕ ركن كوفي
+    </button>
+
+    <button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+         عربيات ملكة
+    </button>
+
+   <button onclick="filter('cards')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+    🪪 كروت طاولة
+     </button>
+
+     <button onclick="filter('acrylic')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
+         ✨ تصميم وقص أكريلك
+     </button>
+
+</div>
+
+    <div id="services-grid"
+         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    </div>
+
+</section>
                 <div class="grid grid-cols-2 gap-4 mb-10">
                     <div class="bg-white p-4 rounded-2xl border border-orange-100 shadow-sm">
                         <i class="fa-solid fa-truck text-orange-500 mb-2 text-xl"></i>
@@ -405,76 +322,7 @@ window.onload = () => {
             </div>
         </section>
 
-        <!-- Interactive Service Catalog -->
-       <section id="catalog" class="mb-24">
-
-    <div class="text-center mb-8">
-        <h3 class="text-3xl font-black text-gray-900">
-            دليل الخدمات والإبداع
-        </h3>
-
-        <p class="text-gray-500 mt-2">
-            اختر نوع الخدمة لاستعراض تصاميمنا الحقيقية
-        </p>
-    </div>
-
-   <div class="flex gap-2 bg-orange-50 p-2 rounded-2xl overflow-x-auto max-w-full mb-8">
-
-    <button onclick="filter('all')" class="filter-btn active bg-orange-600 text-white px-6 py-3 rounded-xl font-black text-xs">
-        الكل
-    </button>
-
-    <button onclick="filter('nature')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🌹 ورد طبيعي
-    </button>
-
-    <button onclick="filter('artificial')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🌸 ورد صناعي
-    </button>
-
-    <button onclick="filter('cars')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🚗 سيارات عرسان
-    </button>
-
-    <button onclick="filter('baby')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        👶 مواليد
-    </button>
-
-    <button onclick="filter('wedding')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        💍 زواج وملكة
-    </button>
-
-    <button onclick="filter('graduation')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🎓 تخرج
-    </button>
-
-    <button onclick="filter('welcome')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        📺 شاشات ترحيبية
-    </button>
-
-    <button onclick="filter('tables')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🖥️ شاشات طاولات
-    </button>
-
-    <button onclick="filter('coffee')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        ☕ ركن كوفي
-    </button>
-
-    <button onclick="filter('queen')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        👑 عربيات ملكة
-    </button>
-
-    <button onclick="filter('printing')" class="filter-btn bg-white text-gray-600 px-6 py-3 rounded-xl font-black text-xs">
-        🖨️ دعوات وأكريليك
-    </button>
-
-</div>
-
-    <div id="services-grid"
-         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    </div>
-
-</section>
+     
         <!-- Booking Form -->
         <section id="booking" class="mb-10">
             <div class="bg-orange-950 rounded-[4rem] p-10 md:p-20 text-white relative overflow-hidden shadow-2xl">
@@ -517,7 +365,8 @@ window.onload = () => {
                     
                                      <option>شاشات ترحيبيه-شاشات طاولات الكترونيه </option>
                                      <option>عربيات ملكه للايجار والبيع  </option>
-                                     <option>طباعه دعوات و احرف اكريلك </option>
+                                     <option>كروت طاولة</option>
+                                     <option>تصميم وقص أكريلك</option>
                                      <option>ركن كوفي حسب الاختيار </option>
                                 </select>
                             </div>
@@ -571,7 +420,7 @@ class="border p-3 rounded-xl">
 <option value="coffee">☕ ركن كوفي</option>
 <option value="queen">👑 عربيات ملكة</option>
 <option value="tablecards">🪪 كروت طاولة</option>
-<option value="acrylic">تصميم وقص أكريلك</option>
+<option value="acrylic">✨تصميم وقص أكريلك</option>
 
 </select>
 
