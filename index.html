@@ -1387,46 +1387,88 @@ desc: 'تصميم وتنفيذ حسب الطلب.'
 function filter(cat) {
 
     const grid = document.getElementById('services-grid');
+
+    if (!grid) return;
+
     grid.innerHTML = '';
 
-    document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('bg-orange-600', 'text-white');
-        b.classList.add('bg-white', 'text-gray-600');
-    });
+    document.querySelectorAll('.filter-btn').forEach(btn => {
 
-    if(window.event && window.event.target){
-        window.event.target.classList.add(
+        btn.classList.remove(
             'bg-orange-600',
             'text-white'
         );
+
+        btn.classList.add(
+            'bg-white',
+            'text-gray-600'
+        );
+
+    });
+
+    const activeBtn = document.querySelector(
+        `.filter-btn[onclick="filter('${cat}')"]`
+    );
+
+    if (activeBtn) {
+
+        activeBtn.classList.remove(
+            'bg-white',
+            'text-gray-600'
+        );
+
+        activeBtn.classList.add(
+            'bg-orange-600',
+            'text-white'
+        );
+
     }
 
-    const items = cat === 'all'
+    const items =
+        cat === 'all'
         ? services
-        : services.filter(s => s.cat === cat);
+        : services.filter(item => item.cat === cat);
 
     items.forEach(s => {
 
         grid.innerHTML += `
         <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
 
-            <div class="overflow-hidden bg-orange-50 h-56 relative">
+            <div class="bg-orange-50 h-56 overflow-hidden">
 
                 <img
                     src="${s.img}"
                     alt="${s.title}"
-                    class="w-full h-full object-contain"
+                    class="w-full h-full object-cover"
                     onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
 
             </div>
 
-            <div class="p-5">
-                <h3 class="font-black text-lg">${s.title}</h3>
-                <p class="text-gray-500 text-sm mt-2">${s.desc}</p>
+            ${isAdmin ? `
+            <div class="p-3">
+                <button
+                    onclick="deleteProduct(${s.id})"
+                    class="bg-red-600 text-white px-3 py-2 rounded-lg w-full">
+                    حذف المنتج
+                </button>
+            </div>
+            ` : ''}
+
+            <div class="p-5 text-center">
+
+                <h3 class="font-black text-lg mb-2">
+                    ${s.title}
+                </h3>
+
+                <p class="text-gray-500 text-sm">
+                    ${s.desc}
+                </p>
+
             </div>
 
         </div>
         `;
+
     });
 
 }
