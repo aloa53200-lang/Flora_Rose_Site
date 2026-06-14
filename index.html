@@ -1461,7 +1461,10 @@ function filter(cat) {
         "_blank"
     );
 }
-         function addProduct() {
+   
+function addProduct() {
+
+    console.log("addProduct works");
 
     const file =
     document.getElementById("newImage").files[0];
@@ -1475,36 +1478,37 @@ function filter(cat) {
 
     reader.onload = function(e) {
 
-        const product = {
+    const product = {
 
-            id: Date.now(),
+        id: Date.now(),
 
-            cat: document.getElementById("newCat").value,
+        cat: document.getElementById("newCat").value,
 
-            title: document.getElementById("newTitle").value,
+        title: document.getElementById("newTitle").value,
 
-            desc: document.getElementById("newDesc").value,
+        desc: document.getElementById("newDesc").value,
 
-            img: e.target.result,
+        img: e.target.result,
 
-            icon: "fa-image"
-
-        };
-
-        services.push(product);
-
-        localStorage.setItem(
-            "floraProducts",
-            JSON.stringify(services)
-        );
-
-        filter('all');
-
-        alert("تمت إضافة المنتج");
+        icon: "fa-image"
 
     };
 
-    reader.readAsDataURL(file);
+    services.push(product);
+
+    localStorage.setItem(
+        "floraProducts",
+        JSON.stringify(services)
+    );
+
+    filter('all');
+
+    alert("تمت إضافة المنتج");
+
+};
+
+reader.readAsDataURL(file);
+
 }
         function openAdmin(){
 
@@ -1552,8 +1556,7 @@ function deleteProduct(id){
 
     }
 
-}
-window.onload = () => {
+}window.onload = () => {
 
     const savedProducts =
     JSON.parse(localStorage.getItem("floraProducts"));
@@ -1570,45 +1573,45 @@ window.onload = () => {
 
     filter('all');
 
-  const chartCanvas =
-document.getElementById('satisfactionChart');
+    const chartCanvas =
+    document.getElementById('satisfactionChart');
 
-if(chartCanvas){
+    if(chartCanvas){
 
-    const ctx = chartCanvas.getContext('2d');
+        const ctx = chartCanvas.getContext('2d');
 
-    new Chart(ctx,{
-        type:'doughnut',
-        data:{
-            labels:[
-                'راضون جداً (5 نجوم)',
-                'راضون (4 نجوم)',
-                'أخرى'
-            ],
-            datasets:[{
-                data:[79,4,1],
-                backgroundColor:[
-                    '#e08726',
-                    '#fbbf24',
-                    '#ffedd5'
+        new Chart(ctx,{
+            type:'doughnut',
+            data:{
+                labels:[
+                    'راضون جداً (5 نجوم)',
+                    'راضون (4 نجوم)',
+                    'أخرى'
                 ],
-                borderWidth:0,
-                hoverOffset:10
-            }]
-        },
-        options:{
-            responsive:true,
-            maintainAspectRatio:false,
-            plugins:{
-                legend:{
-                    position:'bottom'
-                }
+                datasets:[{
+                    data:[79,4,1],
+                    backgroundColor:[
+                        '#e08726',
+                        '#fbbf24',
+                        '#ffedd5'
+                    ],
+                    borderWidth:0,
+                    hoverOffset:10
+                }]
             },
-            cutout:'80%'
-        }
-    });
+            options:{
+                responsive:true,
+                maintainAspectRatio:false,
+                plugins:{
+                    legend:{
+                        position:'bottom'
+                    }
+                },
+                cutout:'80%'
+            }
+        });
 
-}
+    }
 
 };
     </script>
