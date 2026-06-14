@@ -1597,22 +1597,24 @@ function deleteProduct(id){
 
     }
 
-}window.onload = () => {
+}window.onload = function () {
 
     const savedProducts =
-    JSON.parse(localStorage.getItem("floraProducts"));
+        JSON.parse(localStorage.getItem("floraProducts"));
 
-    if(savedProducts){
+    if (savedProducts) {
 
         services.length = 0;
 
-        savedProducts.forEach(item=>{
+        savedProducts.forEach(item => {
             services.push(item);
         });
 
     }
 
     filter('all');
+
+};
 
     const chartCanvas =
     document.getElementById('satisfactionChart');
