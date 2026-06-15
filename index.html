@@ -1688,22 +1688,21 @@ items.forEach(s => {
         }
         async function saveOrder(productName, productImage) {
 
-            const customerName = prompt("اكتب اسمك");
+    const imageUrl =
+        window.location.origin + "/" + productImage;
 
-            if (!customerName) return;
+    const text =
+        "السلام عليكم 🌹" +
+        "\n\nأرغب بطلب هذا المنتج:" +
+        "\n\n" + productName +
+        "\n\nرابط الصورة:" +
+        "\n" + imageUrl;
 
-            const imageUrl =
-                window.location.origin + "/" + productImage;
-
-            window.open(
-                `https://wa.me/966536790268?text=${encodeURIComponent(
-                    "الاسم: " + customerName +
-                    "\n\nالمنتج: " + productName +
-                    "\n\nرابط الصورة:\n" + imageUrl
-                )}`,
-                "_blank"
-            );
-        }
+    window.open(
+        `https://wa.me/966536790268?text=${encodeURIComponent(text)}`,
+        "_blank"
+    );
+}
         function addProduct() {
 
             const file =
