@@ -1627,10 +1627,11 @@ items.forEach(s => {
         <!-- الصورة -->
         <div class="bg-orange-50 h-56 overflow-hidden">
             <img
-                src="${s.img}"
-                alt="${s.title}"
-                class="w-full h-full object-cover"
-                onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
+    src="${s.img}"
+    alt="${s.title}"
+    class="w-full h-full object-contain cursor-pointer"
+    onclick="window.open('https://wa.me/966536790268?text=' + encodeURIComponent('السلام عليكم، أريد طلب هذا المنتج: ${s.title}'), '_blank')"
+    onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
         </div>
 
         <!-- الأزرار مباشرة تحت الصورة -->
