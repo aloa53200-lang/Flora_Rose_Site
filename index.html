@@ -1600,20 +1600,24 @@
                        ];
 
 
-        function filter(cat) {
-            const grid = document.getElementById('services-grid');
-            grid.innerHTML = '';
+      function filter(cat, btn) {
 
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                b.classList.remove('bg-orange-600', 'text-white');
-                b.classList.add('bg-white', 'text-gray-600');
-            });
+    const grid = document.getElementById('services-grid');
+    grid.innerHTML = '';
 
-            event.target.classList.add('bg-orange-600', 'text-white');
+    document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-orange-600','text-white');
+        b.classList.add('bg-white','text-gray-600');
+    });
 
-            const items = cat === 'all'
-                ? services
-                : services.filter(s => s.cat === cat);
+    if(btn){
+        btn.classList.remove('bg-white','text-gray-600');
+        btn.classList.add('bg-orange-600','text-white');
+    }
+
+    const items = cat === 'all'
+        ? services
+        : services.filter(s => s.cat === cat);
             items.forEach(s => {
                 grid.innerHTML += `
     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
