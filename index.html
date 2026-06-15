@@ -1615,38 +1615,56 @@
         btn.classList.add('bg-orange-600','text-white');
     }
 
-    const items = cat === 'all'
-        ? services
-        : services.filter(s => s.cat === cat);
-            items.forEach(s => {
-                grid.innerHTML += `
+const items = cat === 'all'
+    ? services
+    : services.filter(s => s.cat === cat);
+
+items.forEach(s => {
+
+    grid.innerHTML += `
     <div class="service-card bg-white rounded-3xl overflow-hidden border border-orange-100 shadow-sm hover:shadow-xl transition-all">
 
-        <div class="overflow-hidden bg-orange-50 h-56 relative">
-
+        <!-- الصورة -->
+        <div class="bg-orange-50 h-56 overflow-hidden">
             <img
                 src="${s.img}"
                 alt="${s.title}"
-                class="w-full h-full object-contain"
+                class="w-full h-full object-cover"
                 onerror="this.src='https://placehold.co/400x300/e08726/ffffff?text=Flora+Rose'">
-
         </div>
 
-        ${isAdmin ? `
-        <button
-            onclick="deleteProduct(${s.id})"
-            class="bg-red-600 text-white px-3 py-2 rounded-lg mt-2 mx-2">
-            حذف
-        </button>
-        ` : ''}
+        <!-- الأزرار مباشرة تحت الصورة -->
+        <div class="p-4">
 
-        <div class="p-5 text-center">
+            <div class="flex gap-2 mb-4">
 
-            <h3 class="font-black text-xl mb-2">
+                <button
+                    onclick="selectService('${s.title}')"
+                    class="flex-1 bg-orange-100 text-orange-700 py-3 rounded-xl font-bold hover:bg-orange-200">
+                    عرض المنتج
+                </button>
+
+                <button
+                    onclick="saveOrder('${s.title}','${s.img}')"
+                    class="flex-1 bg-orange-600 text-white py-3 rounded-xl font-bold hover:bg-orange-700">
+                    اطلب الآن
+                </button>
+
+            </div>
+
+            ${isAdmin ? `
+            <button
+                onclick="deleteProduct(${s.id})"
+                class="w-full bg-red-600 text-white py-3 rounded-xl font-bold mb-4 hover:bg-red-700">
+                حذف المنتج
+            </button>
+            ` : ''}
+
+            <h3 class="font-black text-xl text-center mb-2">
                 ${s.title}
             </h3>
 
-            <p>
+            <p class="text-gray-500 text-center text-sm">
                 ${s.desc}
             </p>
 
@@ -1654,8 +1672,7 @@
 
     </div>
     `;
-            });
-        }
+});}
         function selectService(title) {
             document.getElementById('cust-service').value = title;
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
